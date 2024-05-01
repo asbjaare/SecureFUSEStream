@@ -4,6 +4,7 @@
  */
 
 #include <err.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -13,7 +14,10 @@
 /* TA's header file */
 #include <video_tee_ta.h>
 
-int int main(void)
+/* Size of buffer to receive hash */
+#define DIGEST_SIZE (256 / 8)
+
+int main(void)
 {
   /* OP-TEE constructs */
   TEEC_UUID uuid = TA_VIDEO_TEE_UUID;
@@ -40,9 +44,12 @@ int int main(void)
   memset(&op, 0, sizeof(op));
 
   /* Insert argument for TA invocation. Just send a number for now */
-  op.paramTypes = TEEC_PARAM_TYPES(TEEC_VALUE_INOUT, TEEC_NONE,
+  op.paramTypes = TEEC_PARAM_TYPES(TEEC_VALUE_INOUT, TEEC_MEMREF_TEMP_OUTPUT,
                                    TEEC_NONE, TEEC_NONE);
   op.params[0].value.a = 69;
+
+  /* Initialize memref parameters */
+  op.params[1].tmpref.size = (size_t)DIGEST_SIZE;
 
   /*
    * Invoke TA to increment number, hash the result and
@@ -55,8 +62,8 @@ int int main(void)
     errx(EXIT_FAILURE, "TA invocation failed with code 0x%x, origin 0x%x",
          res, err_origin);
   }
-  printf("Result of operation: %d\n Hash of result: %x\n Signature: %x\n",
-         op.params[0].value.a, op.params[1].value.a, op.params[2].value.a);
+  printf("Result of operation: %d\n Hash of result: %s\n",
+         op.params[0].value.a, (char *)op.params[1].tmpref.buffer);
 
 
   /* Cleanup session and context */
