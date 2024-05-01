@@ -26,6 +26,7 @@ int main(void)
   TEEC_Session sess;
   TEEC_Operation op;
   uint32_t err_origin;
+  uint8_t *hash_buf;
 
   /* Connect to TEE */
   res = TEEC_InitializeContext(NULL, &ctx);
@@ -50,6 +51,10 @@ int main(void)
 
   /* Initialize memref parameters */
   op.params[1].tmpref.size = (size_t)DIGEST_SIZE;
+  hash_buf = calloc(1, DIGEST_SIZE);
+  if (hash_buf == NULL)
+    errx(EXIT_FAILURE, "Failed to allocate buffer for digest");
+  op.params[1].tmpref.buffer = hash_buf;
 
   /*
    * Invoke TA to increment number, hash the result and
@@ -62,8 +67,13 @@ int main(void)
     errx(EXIT_FAILURE, "TA invocation failed with code 0x%x, origin 0x%x",
          res, err_origin);
   }
-  printf("Result of operation: %d\n Hash of result: %s\n",
-         op.params[0].value.a, (char *)op.params[1].tmpref.buffer);
+  printf("Result of operation: %d\n", op.params[0].value.a);
+
+  printf("Hash of result: ");
+  for (int i = 0; i < DIGEST_SIZE; i++) {
+      printf("%02x", hash_buf[i]);
+  }
+  printf("\n");
 
 
   /* Cleanup session and context */
