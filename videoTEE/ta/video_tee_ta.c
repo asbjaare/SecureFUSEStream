@@ -15,23 +15,11 @@
 /* Digest algorithm to use */
 #define DIGEST_ALG TEE_ALG_SHA256
 
-/* Size of digest (using SHA256) */
-#define DIGEST_SIZE (256 / 8)
-
-/* Size of Elliptic Curve key */
-#define ECDSA_KEY_SIZE 256
-
-/* Size of a signature */
-#define SIGNATURE_SIZE TEE_SHA256_HASH_SIZE * 2
-
 /* Structure to keep track of the current session */
 typedef struct video_ta_sess {
   TEE_OperationHandle op_handle; /* Handle to keep track of tee api op */
   TEE_ObjectHandle key_handle; /* Handle to keep track of key transient object */
-  uint8_t ecdsa_pub_x_raw[ECDSA_KEY_SIZE / 8]; /* Elliptic pub key x */
-  uint32_t ecdsa_pub_x_size;
-  uint8_t ecdsa_pub_y_raw[ECDSA_KEY_SIZE / 8]; /* Elliptic pub key y */
-  uint32_t ecdsa_pub_y_size;
+  signed_res_t res; // The signed result to return to client
 } video_ta_sess_t;
 
 /* Called when TA instance is created */
@@ -51,7 +39,7 @@ void TA_DestroyEntryPoint()
 /* Initialize a session with a client */
 TEE_Result TA_OpenSessionEntryPoint(uint32_t __unused param_types,
                                     TEE_Param __unused params[4],
-                                    void __unused **session)
+                                    void **session)
 {
   /* Allocate session struct */
   video_ta_sess_t *sess_ctx;
@@ -73,6 +61,9 @@ void TA_CloseSessionEntryPoint(void *session)
   /* Free operation */
   if (sess_ctx->op_handle != TEE_HANDLE_NULL)
     TEE_FreeOperation(sess_ctx->op_handle);
+
+  /* Free key handle */
+  TEE_FreeTransientObject(sess_ctx->key_handle);
 
   /* Free session */
   TEE_Free(sess_ctx);
@@ -138,15 +129,15 @@ TEE_Result gen_ecdsa_keypair(video_ta_sess_t *sess_ctx)
     return res;
   }
 
-  /* Set correct pubkey component sizes */
-  sess_ctx->ecdsa_pub_x_size = sizeof(sess_ctx->ecdsa_pub_x_raw);
-  sess_ctx->ecdsa_pub_y_size = sizeof(sess_ctx->ecdsa_pub_y_raw);
+  /* Set initial pubkey component sizes */
+  sess_ctx->res.pub_key_x_size = sizeof(sess_ctx->res.pub_key_x);
+  sess_ctx->res.pub_key_y_size = sizeof(sess_ctx->res.pub_key_y);
 
   /* Extract x component of pubkey */
   res = TEE_GetObjectBufferAttribute(sess_ctx->key_handle,
                                      TEE_ATTR_ECC_PUBLIC_VALUE_X,
-                                     sess_ctx->ecdsa_pub_x_raw,
-                                     &sess_ctx->ecdsa_pub_x_size);
+                                     sess_ctx->res.pub_key_x,
+                                     &sess_ctx->res.pub_key_x_size);
   if (res != TEE_SUCCESS) {
     EMSG("Failed to get pubkey x component with error 0x%x", res);
     return res;
@@ -155,8 +146,8 @@ TEE_Result gen_ecdsa_keypair(video_ta_sess_t *sess_ctx)
   /* Extract y component of pubkey */
   res = TEE_GetObjectBufferAttribute(sess_ctx->key_handle,
                                      TEE_ATTR_ECC_PUBLIC_VALUE_Y,
-                                     sess_ctx->ecdsa_pub_y_raw,
-                                     &sess_ctx->ecdsa_pub_y_size);
+                                     sess_ctx->res.pub_key_y,
+                                     &sess_ctx->res.pub_key_y_size);
   if (res != TEE_SUCCESS) {
     EMSG("Failed to get pubkey y component with error 0x%x", res);
     return res;
@@ -166,8 +157,7 @@ TEE_Result gen_ecdsa_keypair(video_ta_sess_t *sess_ctx)
   return res;
 }
 
-TEE_Result sign_digest(video_ta_sess_t *sess_ctx, void *digest_buf
-                       size_t digest_size);
+TEE_Result sign_digest(video_ta_sess_t *sess_ctx)
 {
   TEE_Result res = TEE_SUCCESS;
 
@@ -192,15 +182,15 @@ TEE_Result sign_digest(video_ta_sess_t *sess_ctx, void *digest_buf
     return res;
   }
 
-  uint8_t signature_buf[SIGNATURE_SIZE];
-
   /* Will verify sig len after signing */
-  uint32_t signature_size = SIGNATURE_SIZE;
+  uint32_t signature_size = sizeof(sess_ctx->res.signature);
   uint32_t exp_signature_size = SIGNATURE_SIZE;
 
   /* Perform signing operation */
-  res = TEE_AsymmetricSignDigest(sess_ctx->op_handle, NULL, 0, digest_buf,
-                                 digest_size, signature_buf, &signature_size);
+  res = TEE_AsymmetricSignDigest(sess_ctx->op_handle, NULL, 0, sess_ctx->res.digest,
+                                 sizeof(sess_ctx->res.digest),
+                                 sess_ctx->res.signature,
+                                 &signature_size);
   if (res != TEE_SUCCESS) {
     EMSG("Failed to sign digest with error 0x%x", res);
     return res;
@@ -210,6 +200,8 @@ TEE_Result sign_digest(video_ta_sess_t *sess_ctx, void *digest_buf
     EMSG("Signature length was incorrect!");
     return TEE_ERROR_GENERIC;
   }
+
+  return res;
 }
 
 /* Increment the value and sign the result */
@@ -217,10 +209,11 @@ static TEE_Result inc_and_sign(video_ta_sess_t *sess_ctx,
                              uint32_t param_types, TEE_Param params[4])
 {
   TEE_Result res = TEE_SUCCESS;
+
   /* Expected parameter types */
   uint32_t exp_param_types = TEE_PARAM_TYPES(
     TEE_PARAM_TYPE_VALUE_INOUT, /* Value to increment */
-    TEE_PARAM_TYPE_MEMREF_OUTPUT, /* Value digest */
+    TEE_PARAM_TYPE_MEMREF_OUTPUT, /* Signed result */
     TEE_PARAM_TYPE_NONE,
     TEE_PARAM_TYPE_NONE);
 
@@ -229,19 +222,29 @@ static TEE_Result inc_and_sign(video_ta_sess_t *sess_ctx,
 
   /* Increment the value */
   params[0].value.a++;
+  sess_ctx->res.val = params[0].value.a;
 
   /* Generate a hash of the new value */
   uint32_t val = params[0].value.a;
   void *val_ref = (void *)&val;
 
-  params[1].memref.size = DIGEST_SIZE;
-
-  res = create_digest(sess_ctx, val_ref, sizeof(uint32_t), params[1].memref.buffer);
+  res = create_digest(sess_ctx, val_ref, sizeof(uint32_t), &sess_ctx->res.digest);
+  if (res != TEE_SUCCESS) {
+    EMSG("Failed to create digest with error 0x%x", res);
+    return res;
+  }
 
   /* Sign the hashed value */
+  res = sign_digest(sess_ctx);
+  if (res != TEE_SUCCESS)
+    EMSG("Failed to sign digest with error 0x%x", res);
+
+  /* Copy results into return buffer */
+  params[1].memref.size = sizeof(sess_ctx->res);
+  TEE_MemMove(params[1].memref.buffer, &sess_ctx->res, sizeof(sess_ctx->res));
 
   /* Free operation and exit */
-  TEE_FreeOperation(sess_ctx->op_handle);
+  TEE_FreeOperation(sess_ctx->op_handle); // NOTE: Is this needed here?
   return res;
 }
 
