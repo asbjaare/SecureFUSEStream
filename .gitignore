@@ -1,1 +1,11 @@
 /env/
+*.d
+*.cmd
+*.o
+*.dmp
+*.elf
+*.map
+*.ta
+*.lds
+videoTEE/host/video_tee
+videoTEE/ta/dyn_list
