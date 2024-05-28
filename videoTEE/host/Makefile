@@ -12,6 +12,8 @@ OBJS = main.o
 
 CFLAGS += -Wall -I../ta/include -I./include
 CFLAGS += -I$(TEEC_EXPORT)/include
+CFLAGS += -I../lib/libbmp
+CFLAGS += -I../lib/bmp
 LDADD += -lteec -L$(TEEC_EXPORT)/lib
 
 BINARY = video_tee
