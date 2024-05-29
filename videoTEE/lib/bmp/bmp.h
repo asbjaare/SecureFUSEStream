@@ -2,7 +2,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "libbmp/libbmp.h"
+#include "libbmp.h"
 
 
 typedef struct RGB {

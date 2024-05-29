@@ -8,12 +8,12 @@ OBJCOPY ?= $(CROSS_COMPILE)objcopy
 OBJDUMP ?= $(CROSS_COMPILE)objdump
 READELF ?= $(CROSS_COMPILE)readelf
 
-OBJS = main.o
+OBJS = main.o ../lib/bmp/bmp.o ../lib/libbmp/libbmp.o
 
 CFLAGS += -Wall -I../ta/include -I./include
 CFLAGS += -I$(TEEC_EXPORT)/include
-CFLAGS += -I../lib/libbmp
 CFLAGS += -I../lib/bmp
+CFLAGS += -I../lib/libbmp
 LDADD += -lteec -L$(TEEC_EXPORT)/lib
 
 BINARY = video_tee
@@ -22,7 +22,7 @@ BINARY = video_tee
 all: $(BINARY)
 
 $(BINARY): $(OBJS)
-	$(CC) $(LDFLAGS) -o $@ $< $(LDADD)
+	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LDADD)
 
 .PHONY: clean
 clean:

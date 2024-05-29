@@ -14,6 +14,10 @@
 /* TA's header file */
 #include <video_tee_ta.h>
 
+/* BMP library */
+// #include <libbmp.h>
+#include "bmp.h"
+
 /* Size of buffer to receive hash */
 #define DIGEST_SIZE (256 / 8)
 
@@ -24,6 +28,35 @@ void print_hex(uint8_t *buf, size_t len)
       printf("%02x", buf[i]);
   }
   printf("\n");
+}
+
+/* Load an image into memory */
+void load_img(char *path, RGB *img, img_meta_t *metadata)
+{
+  /* Get image dimensions */
+  int width, height;
+  GetSize(path, &width, &height);
+
+  /* Allocate image */
+  img = malloc(sizeof(RGB) * width * height);
+
+  /* Load from bmp */
+  LoadRegion(path, 0, 0, width, height, img);
+
+  /* Set metadata */
+  (metadata->width) = width;
+  (metadata->height) = height;
+
+  return;
+}
+
+/* Write an image from memory to disk */
+void write_img(char *path, RGB *img, img_meta_t *metadata)
+{
+  /* Create BMP file */
+  CreateBMP(path, metadata->width, metadata->height);
+  /* Write image data */
+  WriteRegion(path, 0, 0, metadata->width, metadata->height, img);
 }
 
 int main(void)
@@ -53,33 +86,41 @@ int main(void)
   /* Clear operation struct */
   memset(&op, 0, sizeof(op));
 
-  /* Insert argument for TA invocation. Just send a number for now */
-  op.paramTypes = TEEC_PARAM_TYPES(TEEC_VALUE_INOUT, TEEC_MEMREF_TEMP_OUTPUT,
-                                   TEEC_NONE, TEEC_NONE);
-  op.params[0].value.a = 69;
+  /* Insert argument for TA invocation. */
+  op.paramTypes = TEEC_PARAM_TYPES(TEEC_MEMREF_TEMP_INPUT, TEEC_MEMREF_TEMP_INPUT,
+                                   TEEC_MEMREF_TEMP_OUTPUT, TEEC_MEMREF_TEMP_OUTPUT);
 
-  /* Initialize memref parameters */
-  op.params[1].tmpref.size = (size_t)sizeof(signed_res_t);
+  /* Load image into memref to send to TA */
+  img_meta_t *metadata = calloc(1, sizeof(img_meta_t));
+  load_img("cod.bmp", op.params[0].tmpref.buffer, metadata);
+  op.params[0].tmpref.size = sizeof(RGB) * metadata->width * metadata->height;
+  op.params[1].tmpref.buffer = metadata;
+  op.params[1].tmpref.size = sizeof(metadata);
+
+  /* Initialize output memref parameters */
+  op.params[3].tmpref.size = (size_t)sizeof(signed_res_t);
   res_buf = calloc(1, sizeof(signed_res_t));
   if (res_buf == NULL)
     errx(EXIT_FAILURE, "Failed to allocate buffer for digest");
-  op.params[1].tmpref.buffer = res_buf;
+  op.params[3].tmpref.buffer = res_buf;
 
   /*
    * Invoke TA to increment number, hash the result and
    * sign it with its hardware key
    */
-  printf("Invoking TA to increment %d and sign the operation\n",
-         op.params[0].value.a);
+  printf("Invoking TA to process image and sign the operation\n");
   res = TEEC_InvokeCommand(&sess, TA_VIDEO_INC_SIGN, &op, &err_origin);
   if (res != TEEC_SUCCESS)
     errx(EXIT_FAILURE, "TA invocation failed with code 0x%x, origin 0x%x",
          res, err_origin);
 
-  /* ------------------- PRINTS ------------------- */
-  printf("Result of operation: %d\n", op.params[0].value.a);
+  /* Write processed image to disk */
+  write_img("cod_grayscale.bmp", op.params[2].tmpref.buffer, metadata);
 
-  printf("Result in result struct: %d\n", res_buf->val);
+  /* ------------------- PRINTS ------------------- */
+  // printf("Result of operation: %d\n", op.params[0].value.a);
+
+  // printf("Result in result struct: %d\n", res_buf->val);
 
   printf("Hash of result: ");
   print_hex(res_buf->digest, DIGEST_SIZE);
