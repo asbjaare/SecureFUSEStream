@@ -15,7 +15,6 @@
 #include <video_tee_ta.h>
 
 /* BMP library */
-// #include <libbmp.h>
 #include "bmp.h"
 
 /* Size of buffer to receive hash */
@@ -31,17 +30,19 @@ void print_hex(uint8_t *buf, size_t len)
 }
 
 /* Load an image into memory */
-void load_img(char *path, RGB *img, img_meta_t *metadata)
+void load_img(char *path, RGB **img, img_meta_t *metadata)
 {
   /* Get image dimensions */
   int width, height;
   GetSize(path, &width, &height);
 
   /* Allocate image */
-  img = malloc(sizeof(RGB) * width * height);
+  *img = malloc(sizeof(RGB) * width * height);
+  if (*img == NULL)
+    return;
 
   /* Load from bmp */
-  LoadRegion(path, 0, 0, width, height, img);
+  LoadRegion(path, 0, 0, width, height, *img);
 
   /* Set metadata */
   (metadata->width) = (uint32_t) width;
@@ -68,6 +69,7 @@ int main(void)
   TEEC_Session sess;
   TEEC_Operation op;
   uint32_t err_origin;
+  RGB *res_img;
   RGB *img;
   signed_res_t *res_buf;
 
@@ -88,32 +90,31 @@ int main(void)
   memset(&op, 0, sizeof(op));
 
   /* Insert argument for TA invocation. */
-  op.paramTypes = TEEC_PARAM_TYPES(TEEC_MEMREF_TEMP_INPUT, TEEC_NONE,
+  op.paramTypes = TEEC_PARAM_TYPES(TEEC_MEMREF_TEMP_INPUT, TEEC_MEMREF_TEMP_OUTPUT,
                                    TEEC_MEMREF_TEMP_OUTPUT, TEEC_NONE);
 
   /* Load image into memref to send to TA */
   img_meta_t *metadata = calloc(1, sizeof(img_meta_t));
-  load_img("/home/oty000/cod.bmp", img, metadata);
-  printf("img pointer: %p\n", img);
+  load_img("/home/oty000/marguerite.bmp", &img, metadata);
+  if (img == NULL)
+    err(EXIT_FAILURE, "failed to load image");
+
   op.params[0].tmpref.size = (size_t)(sizeof(RGB) * metadata->width * metadata->height);
   op.params[0].tmpref.buffer = img;
-  // op.params[1].tmpref.size = sizeof(metadata);
-  // op.params[1].tmpref.buffer = metadata;
 
   /* Initialize output memref parameters */
-  // op.params[2].tmpref.size = sizeof(RGB) * metadata->width * metadata->height;
-  // res_img = calloc(1, sizeof(RGB) * metadata->width * metadata->height);
-  // if (res_img == NULL)
-  //   errx(EXIT_FAILURE, "Failed to allocate buffer for result image");
-  // op.params[2].tmpref.buffer = res_img;
-
-  op.params[2].tmpref.size = (size_t)sizeof(signed_res_t);
+  op.params[1].tmpref.size = (size_t)sizeof(signed_res_t);
   res_buf = calloc(1, sizeof(signed_res_t));
   if (res_buf == NULL)
     errx(EXIT_FAILURE, "Failed to allocate buffer for digest");
-  op.params[2].tmpref.buffer = res_buf;
+  op.params[1].tmpref.buffer = res_buf;
 
-  printf("width and height: %d, %d\n", metadata->width, metadata->height);
+  op.params[2].tmpref.size = sizeof(RGB) * metadata->width * metadata->height;
+  res_img = calloc(1, sizeof(RGB) * metadata->width * metadata->height);
+  if (res_img == NULL)
+    errx(EXIT_FAILURE, "Failed to allocate buffer for result image");
+  op.params[2].tmpref.buffer = res_img;
+
 
   /*
    * Invoke TA to increment number, hash the result and
@@ -127,12 +128,9 @@ int main(void)
          res, err_origin);
 
   /* Write processed image to disk */
-  write_img("/home/oty000/cod_grayscale.bmp", img, metadata);
+  write_img("/home/oty000/grayscale.bmp", res_img, metadata);
 
   /* ------------------- PRINTS ------------------- */
-  // printf("Result of operation: %d\n", op.params[0].value.a);
-
-  // printf("Result in result struct: %d\n", res_buf->val);
 
   printf("Hash of result: ");
   print_hex(res_buf->digest, DIGEST_SIZE);
