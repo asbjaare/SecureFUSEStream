@@ -23,16 +23,16 @@ typedef struct video_ta_sess {
 } video_ta_sess_t;
 
 typedef struct RGB {
-  unsigned char red;
-  unsigned char green;
-  unsigned char blue;
+  uint8_t red;
+  uint8_t green;
+  uint8_t blue;
 } RGB;
 
 /* Convert an image to grayscale
  * COURTESY OF UIT. TAKEN FROM THE PRECODE IN THE PARALLEL PROGRAMMING COURSE */
-void ImageToGrayscale(RGB *img, const int width, const int height)
+void ImageToGrayscale(RGB *img, size_t size)
 {
-    for(int i = 0; i < width * height; i++){
+    for(int i = 0; i < size; i++){
         char grayscale = img[i].red * 0.3 + img[i].green * 0.59 + img[i].blue * 0.11;
         img[i].red = grayscale;
         img[i].green = grayscale;
@@ -227,28 +227,25 @@ static TEE_Result inc_and_sign(video_ta_sess_t *sess_ctx,
                              uint32_t param_types, TEE_Param params[4])
 {
   TEE_Result res = TEE_SUCCESS;
+  return res;
 
   /* Expected parameter types */
   uint32_t exp_param_types = TEE_PARAM_TYPES(
-    TEE_PARAM_TYPE_MEMREF_INPUT, /* Input image */
-    TEE_PARAM_TYPE_MEMREF_INPUT, /* Input image metadata */
-    TEE_PARAM_TYPE_MEMREF_OUTPUT, /* Output image */
-    TEE_PARAM_TYPE_MEMREF_OUTPUT); /* Attestation */
+    TEE_PARAM_TYPE_MEMREF_INOUT, /* Input image */
+    TEE_PARAM_TYPE_NONE, /* Input image metadata */
+    TEE_PARAM_TYPE_MEMREF_OUTPUT, /* Attestation */
+    TEE_PARAM_TYPE_NONE);
 
   if (param_types != exp_param_types)
     return TEE_ERROR_BAD_PARAMETERS;
 
-  RGB *img = (RGB *)params[0].memref.buffer;
-  img_meta_t *metadata = (img_meta_t *)params[1].memref.buffer;
+  RGB *img = (RGB *)(params[0].memref.buffer);
+  // img_meta_t *metadata = (img_meta_t *)(params[1].memref.buffer);
 
-  ImageToGrayscale(img, metadata->width, metadata->height);
-
-  // TODO: Sign and return grayscale image
- 
-  // sess_ctx->res.val = params[0].value.a;
+  // ImageToGrayscale(img, (params[0].memref.size)/sizeof(RGB));
 
   /* Generate a hash of the new image */
-  res = create_digest(sess_ctx, img, sizeof(uint32_t), &sess_ctx->res.digest);
+  res = create_digest(sess_ctx, img, sizeof(uint32_t), &(sess_ctx->res.digest));
   if (res != TEE_SUCCESS) {
     EMSG("Failed to create digest with error 0x%x", res);
     return res;
@@ -260,12 +257,8 @@ static TEE_Result inc_and_sign(video_ta_sess_t *sess_ctx,
     EMSG("Failed to sign digest with error 0x%x", res);
 
   /* Copy results into return buffer */
-  params[2].memref.size = params[0].memref.size;
-  params[2].memref.buffer = img;
-
-  /* Copy signed results to return buffer */
-  params[3].memref.size = sizeof(sess_ctx->res);
-  TEE_MemMove(params[3].memref.buffer, &sess_ctx->res, sizeof(sess_ctx->res));
+  params[2].memref.size = sizeof(sess_ctx->res);
+  TEE_MemMove(params[2].memref.buffer, &sess_ctx->res, sizeof(sess_ctx->res));
 
   /* Free operation and exit */
   TEE_FreeOperation(sess_ctx->op_handle); // NOTE: Is this needed here?
@@ -277,7 +270,7 @@ TEE_Result TA_InvokeCommandEntryPoint(
   void *session,
   uint32_t cmd_id,
   uint32_t param_types,
-  TEE_Param params[4]) 
+  TEE_Param params[4])
 {
   /* Unused parameter for now */
   video_ta_sess_t *sess_ctx = (video_ta_sess_t *)session;
