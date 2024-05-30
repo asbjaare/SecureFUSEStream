@@ -227,22 +227,23 @@ static TEE_Result inc_and_sign(video_ta_sess_t *sess_ctx,
                              uint32_t param_types, TEE_Param params[4])
 {
   TEE_Result res = TEE_SUCCESS;
-  return res;
 
   /* Expected parameter types */
   uint32_t exp_param_types = TEE_PARAM_TYPES(
-    TEE_PARAM_TYPE_MEMREF_INOUT, /* Input image */
-    TEE_PARAM_TYPE_NONE, /* Input image metadata */
+    TEE_PARAM_TYPE_MEMREF_INPUT, /* Input image */
     TEE_PARAM_TYPE_MEMREF_OUTPUT, /* Attestation */
+    TEE_PARAM_TYPE_MEMREF_OUTPUT, /* Out img */
     TEE_PARAM_TYPE_NONE);
 
   if (param_types != exp_param_types)
     return TEE_ERROR_BAD_PARAMETERS;
 
-  RGB *img = (RGB *)(params[0].memref.buffer);
-  // img_meta_t *metadata = (img_meta_t *)(params[1].memref.buffer);
+  RGB *img = TEE_Malloc(params[0].memref.size, TEE_MALLOC_FILL_ZERO);
+  if (img == NULL)
+    return TEE_ERROR_OUT_OF_MEMORY;
+  TEE_MemMove(img, (RGB *)params[0].memref.buffer, (size_t)params[0].memref.size);
 
-  // ImageToGrayscale(img, (params[0].memref.size)/sizeof(RGB));
+  ImageToGrayscale(img, (params[0].memref.size)/sizeof(RGB));
 
   /* Generate a hash of the new image */
   res = create_digest(sess_ctx, img, sizeof(uint32_t), &(sess_ctx->res.digest));
@@ -256,9 +257,13 @@ static TEE_Result inc_and_sign(video_ta_sess_t *sess_ctx,
   if (res != TEE_SUCCESS)
     EMSG("Failed to sign digest with error 0x%x", res);
 
-  /* Copy results into return buffer */
-  params[2].memref.size = sizeof(sess_ctx->res);
-  TEE_MemMove(params[2].memref.buffer, &sess_ctx->res, sizeof(sess_ctx->res));
+  /* Copy attestation results into return buffer */
+  params[1].memref.size = sizeof(sess_ctx->res);
+  TEE_MemMove(params[1].memref.buffer, &sess_ctx->res, sizeof(sess_ctx->res));
+
+  /* Copy processed image */
+  params[2].memref.size = params[0].memref.size;
+  TEE_MemMove(params[2].memref.buffer, img, params[0].memref.size);
 
   /* Free operation and exit */
   TEE_FreeOperation(sess_ctx->op_handle); // NOTE: Is this needed here?
