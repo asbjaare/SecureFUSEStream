@@ -16,6 +16,7 @@
 
 /* BMP library */
 #include "bmp.h"
+#include "libbmp.h"
 
 /* Size of buffer to receive hash */
 #define DIGEST_SIZE (256 / 8)
@@ -44,24 +45,34 @@ void print_hex(uint8_t *buf, size_t len) {
 }
 
 /* Load an image into memory */
-void load_img(char *path, RGB **img, img_meta_t *metadata) {
+FILE *load_img(char *path, RGB **img, img_meta_t *metadata) {
+
+  /* Open img file */
+  FILE *img_file = fopen(path, "rb");
+
+  /* Read file contents */
+	bmp_img img_handle;
+	bmp_img_read(&img_handle, img_file);
+
   /* Get image dimensions */
   int width, height;
-  GetSize(path, &width, &height);
+  GetSize(img_handle, &width, &height);
 
   /* Allocate image */
   *img = malloc(sizeof(RGB) * width * height);
   if (*img == NULL)
-    return;
+    return img_file;
 
   /* Load from bmp */
-  LoadRegion(path, 0, 0, width, height, *img);
+  LoadRegion(img_handle, 0, 0, width, height, *img);
 
   /* Set metadata */
   (metadata->width) = (uint32_t)width;
   (metadata->height) = (uint32_t)height;
 
-  return;
+  bmp_img_free(&img_handle);
+
+  return img_file;
 }
 
 /* Write an image from memory to disk */
@@ -83,6 +94,7 @@ int main(int argc, char *argv[]) {
   RGB *res_img;
   RGB *img;
   signed_res_t *res_buf;
+  FILE *img_fp;
 
   /* Connect to TEE */
   res = TEEC_InitializeContext(NULL, &ctx);
@@ -108,7 +120,7 @@ int main(int argc, char *argv[]) {
 
   /* Load image into memref to send to TA */
   img_meta_t *metadata = calloc(1, sizeof(img_meta_t));
-  load_img(argv[1], &img, metadata);
+  img_fp = load_img(argv[1], &img, metadata);
   if (img == NULL)
     errx(EXIT_FAILURE, "failed to load image");
 
@@ -133,15 +145,16 @@ int main(int argc, char *argv[]) {
    * Invoke TA to increment number, hash the result and
    * sign it with its hardware key
    */
-  printf("Invoking TA to process image and sign the operation\n");
+  // printf("Invoking TA to process image and sign the operation\n");
   res = TEEC_InvokeCommand(&sess, TA_VIDEO_INC_SIGN, &op, &err_origin);
-  printf("Success\n");
+  // printf("Success\n");
   if (res != TEEC_SUCCESS)
     errx(EXIT_FAILURE, "TA invocation failed with code 0x%x, origin 0x%x", res,
          err_origin);
 
   // Print timestamp of successful computation
   printf("%lld\n", gettime());
+  fclose(img_fp);
   // char new_filename[256]; // Adjust size as needed based on the maximum expected
                           // path length
   /* Write processed image to disk */

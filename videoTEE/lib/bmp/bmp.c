@@ -1,18 +1,13 @@
 #include "bmp.h"
 
-void GetSize(const char* filepath,int* width, int *height){
-	bmp_img img;
-	bmp_img_read (&img, filepath);
-    *width=img.img_header.biWidth;
-    *height=img.img_header.biHeight;
-    bmp_img_free (&img);
+void GetSize(const bmp_img img, int* width, int *height){
+   *width=img.img_header.biWidth;
+   *height=img.img_header.biHeight;
 }
 
 
 
-void LoadRegion(const char* filepath,const int x,const int y,const int width,const int height,RGB* region){
-    bmp_img img;
-	bmp_img_read (&img, filepath);
+void LoadRegion(const bmp_img img, const int x,const int y,const int width,const int height,RGB* region){
     // Load region
     for(int curY=y;curY<y+height;curY++){
         for(int curX=x;curX<x+width;curX++){
@@ -21,7 +16,6 @@ void LoadRegion(const char* filepath,const int x,const int y,const int width,con
             region[(curY-y)*width+(curX-x)].blue=img.img_pixels[curY][curX].blue;
         }
     }
-    bmp_img_free (&img);
 }
 
 void WriteRegion(const char* filepath,const int x,const int y,const int width,const int height,RGB* region){

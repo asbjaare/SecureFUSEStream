@@ -174,9 +174,9 @@ bmp_img_write (const bmp_img *img,
 
 enum bmp_error
 bmp_img_read (bmp_img    *img,
-              const char *filename)
+              FILE *img_file)
 {
-	FILE *img_file = fopen (filename, "rb");
+	// FILE *img_file = fopen (filename, "rb");
 	
 	if (img_file == NULL)
 	{
@@ -189,7 +189,7 @@ bmp_img_read (bmp_img    *img,
 	if (err != BMP_OK)
 	{
 		// ERROR: Could'nt read the image header!
-		fclose (img_file);
+		// fclose (img_file);
 		return err;
 	}
 	
@@ -209,7 +209,7 @@ bmp_img_read (bmp_img    *img,
 		// Read a whole row of pixels from the file:
 		if (fread (img->img_pixels[abs (offset - y)], sizeof (bmp_pixel), items, img_file) != items)
 		{
-			fclose (img_file);
+			// fclose (img_file);
 			return BMP_ERROR;
 		}
 		
@@ -218,6 +218,6 @@ bmp_img_read (bmp_img    *img,
 	}
 	
 	// NOTE: All good!
-	fclose (img_file);
+	// fclose (img_file);
 	return BMP_OK;
 }
