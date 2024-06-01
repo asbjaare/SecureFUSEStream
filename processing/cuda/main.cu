@@ -1,143 +1,135 @@
-#include <cuda_runtime.h>
-#include <libavcodec/avcodec.h>
-#include <libavformat/avformat.h>
-#include <libswscale/swscale.h>
+/**
+*Developed By Karan Bhagat
+*February 2017
+**/
+
 #include <stdio.h>
+#include <string>
+#include <math.h>
+#include <iostream>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 
-// CUDA kernel to process frame data
-__global__ void process_frame(uint8_t *data, int width, int height) {
-  int x = blockIdx.x * blockDim.x + threadIdx.x;
-  int y = blockIdx.y * blockDim.y + threadIdx.y;
+//number of channels i.e. R G B
+#define CHANNELS 3
 
-  if (x < width && y < height) {
-    int idx = y * width + x;
-    data[idx] = 255 - data[idx]; // Example: Invert pixel values
-  }
+//Cuda kernel for converting RGB image into a GreyScale image
+__global__
+void colorConvertToGrey(unsigned char *rgb, unsigned char *grey, int rows, int cols)
+{
+	int col = threadIdx.x + blockIdx.x * blockDim.x;
+	int row = threadIdx.y + blockIdx.y * blockDim.y;
+
+	//Compute for only those threads which map directly to 
+	//image grid
+	if (col < cols && row < rows)
+	{
+		int grey_offset = row * cols + col;
+		int rgb_offset = grey_offset * CHANNELS;
+	
+    	unsigned char r = rgb[rgb_offset + 0];
+	    unsigned char g = rgb[rgb_offset + 1];
+	    unsigned char b = rgb[rgb_offset + 2];
+	
+	    grey[grey_offset] = r * 0.299f + g * 0.587f + b * 0.114f;
+    }
 }
 
-int main(int argc, char *argv[]) {
-  av_register_all();
+size_t loadImageFile(unsigned char *grey_image, const std::string &input_file, int *rows, int *cols );
 
-  if (argc < 2) {
-    printf("Usage: %s <video file>\n", argv[0]);
-    return -1;
-  }
+void outputImage(const std::string &output_file, unsigned char *grey_image, int rows, int cols);
 
-  AVFormatContext *pFormatContext = avformat_alloc_context();
-  if (!pFormatContext) {
-    printf("ERROR: Could not allocate memory for Format Context\n");
-    return -1;
-  }
+unsigned char *h_rgb_image; //store image's rbg data
 
-  if (avformat_open_input(&pFormatContext, argv[1], NULL, NULL) != 0) {
-    printf("ERROR: Could not open the file\n");
-    return -1;
-  }
+int main(int argc, char **argv) 
+{
+	std::string input_file;
+	std::string output_file;
 
-  if (avformat_find_stream_info(pFormatContext, NULL) < 0) {
-    printf("ERROR: Could not get the stream info\n");
-    return -1;
-  }
+	//Check for the input file and output file names
+	switch(argc) {
+		case 3:
+			input_file = std::string(argv[1]);
+			output_file = std::string(argv[2]);
+            break;
+		default:
+			std::cerr << "Usage: <executable> input_file output_file";
+			exit(1);
+	}
+	
+	unsigned char *d_rgb_image; //array for storing rgb data on device
+	unsigned char *h_grey_image, *d_grey_image; //host and device's grey data array pointers
+	int rows; //number of rows of pixels
+	int cols; //number of columns of pixels
+	
+	//load image into an array and retrieve number of pixels
+	const size_t total_pixels = loadImageFile(h_grey_image, input_file, &rows, &cols);
 
-  AVCodec *pCodec = NULL;
-  AVCodecParameters *pCodecParameters = NULL;
-  int video_stream_index = -1;
+	//allocate memory of host's grey data array
+	h_grey_image = (unsigned char *)malloc(sizeof(unsigned char*)* total_pixels);
 
-  for (int i = 0; i < pFormatContext->nb_streams; i++) {
-    AVCodecParameters *pLocalCodecParameters =
-        pFormatContext->streams[i]->codecpar;
-    AVCodec *pLocalCodec =
-        avcodec_find_decoder(pLocalCodecParameters->codec_id);
+	//allocate and initialize memory on device
+	cudaMalloc(&d_rgb_image, sizeof(unsigned char) * total_pixels * CHANNELS);
+	cudaMalloc(&d_grey_image, sizeof(unsigned char) * total_pixels);
+	cudaMemset(d_grey_image, 0, sizeof(unsigned char) * total_pixels);
+	
+	//copy host rgb data array to device rgb data array
+	cudaMemcpy(d_rgb_image, h_rgb_image, sizeof(unsigned char) * total_pixels * CHANNELS, cudaMemcpyHostToDevice);
 
-    if (pLocalCodecParameters->codec_type == AVMEDIA_TYPE_VIDEO) {
-      video_stream_index = i;
-      pCodec = pLocalCodec;
-      pCodecParameters = pLocalCodecParameters;
+	//define block and grid dimensions
+	const dim3 dimGrid((int)ceil((cols)/16), (int)ceil((rows)/16));
+	const dim3 dimBlock(16, 16);
+	
+	//execute cuda kernel
+	colorConvertToGrey<<<dimGrid, dimBlock>>>(d_rgb_image, d_grey_image, rows, cols);
 
-      printf("Video Codec: resolution %d x %d\n", pLocalCodecParameters->width,
-             pLocalCodecParameters->height);
-      break;
-    }
-  }
+	//copy computed gray data array from device to host
+	cudaMemcpy(h_grey_image, d_grey_image, sizeof(unsigned char) * total_pixels, cudaMemcpyDeviceToHost);
 
-  if (video_stream_index == -1) {
-    printf("ERROR: Could not find a video stream in the file\n");
-    return -1;
-  }
+	//output the grayscale image
+	outputImage(output_file, h_grey_image, rows, cols);
+	cudaFree(d_rgb_image);
+	cudaFree(d_grey_image);
+	return 0;
+}
 
-  AVCodecContext *pCodecContext = avcodec_alloc_context3(pCodec);
-  if (!pCodecContext) {
-    printf("ERROR: failed to allocated memory for AVCodecContext\n");
-    return -1;
-  }
+//function for loading an image into rgb format unsigned char array
+size_t loadImageFile(unsigned char *grey_image, const std::string &input_file, int *rows, int *cols) 
+{
+	cv::Mat img_data; //opencv Mat object
 
-  if (avcodec_parameters_to_context(pCodecContext, pCodecParameters) < 0) {
-    printf("ERROR: failed to copy codec params to codec context\n");
-    return -1;
-  }
+	//read image data into img_data Mat object
+	img_data = cv::imread(input_file.c_str(), cv::IMREAD_COLOR);
+	if (img_data.empty()) 
+	{
+		std::cerr << "Unable to laod image file: " << input_file << std::endl;
+	}
+		
+	*rows = img_data.rows;
+	*cols = img_data.cols;
 
-  if (avcodec_open2(pCodecContext, pCodec, NULL) < 0) {
-    printf("ERROR: failed to open codec through avcodec_open2\n");
-    return -1;
-  }
+	//allocate memory for host rgb data array
+	h_rgb_image = (unsigned char*) malloc(*rows * *cols * sizeof(unsigned char) * 3);
+	unsigned char* rgb_image = (unsigned char*)img_data.data;
 
-  AVFrame *pFrame = av_frame_alloc();
-  AVPacket *pPacket = av_packet_alloc();
+	//populate host's rgb data array
+	int x = 0;
+	for (x = 0; x < *rows * *cols * 3; x++)
+	{
+		h_rgb_image[x] = rgb_image[x];
+	}
+	
+	size_t num_of_pixels = img_data.rows * img_data.cols;
+	
+	return num_of_pixels;
+}
 
-  while (av_read_frame(pFormatContext, pPacket) >= 0) {
-    if (pPacket->stream_index == video_stream_index) {
-      int response = avcodec_send_packet(pCodecContext, pPacket);
-      if (response < 0) {
-        printf("ERROR: Failed to decode packet\n");
-        continue;
-      }
-
-      response = avcodec_receive_frame(pCodecContext, pFrame);
-      if (response == AVERROR(EAGAIN) || response == AVERROR_EOF) {
-        continue;
-      } else if (response < 0) {
-        printf("ERROR: Failed to receive frame\n");
-        return -1;
-      }
-
-      // Allocate device memory and copy frame data
-      uint8_t *d_frame;
-      int frame_size = pFrame->width * pFrame->height;
-      cudaMalloc((void **)&d_frame, frame_size);
-      cudaMemcpy(d_frame, pFrame->data[0], frame_size, cudaMemcpyHostToDevice);
-
-      // Define block and grid sizes
-      dim3 threadsPerBlock(16, 16);
-      dim3 numBlocks(
-          (pFrame->width + threadsPerBlock.x - 1) / threadsPerBlock.x,
-          (pFrame->height + threadsPerBlock.y - 1) / threadsPerBlock.y);
-
-      // Launch CUDA kernel
-      process_frame<<<numBlocks, threadsPerBlock>>>(d_frame, pFrame->width,
-                                                    pFrame->height);
-      cudaDeviceSynchronize();
-
-      // Copy processed data back to host
-      cudaMemcpy(pFrame->data[0], d_frame, frame_size, cudaMemcpyDeviceToHost);
-
-      // Here you can save or display the processed frame
-      printf("Processed Frame %d (type=%c, size=%d bytes) pts %ld key_frame %d "
-             "[DTS %d]\n",
-             pCodecContext->frame_number,
-             av_get_picture_type_char(pFrame->pict_type), pFrame->pkt_size,
-             pFrame->pts, pFrame->key_frame, pFrame->coded_picture_number);
-
-      // Free device memory
-      cudaFree(d_frame);
-    }
-    av_packet_unref(pPacket);
-  }
-
-  av_frame_free(&pFrame);
-  av_packet_free(&pPacket);
-  avcodec_free_context(&pCodecContext);
-  avformat_close_input(&pFormatContext);
-  avformat_free_context(pFormatContext);
-
-  return 0;
+//function for writing gray data array to the image file
+void outputImage(const std::string& output_file, unsigned char* grey_image, int rows, int cols)
+{
+	//serialize gray data array into opencv's Mat object
+	cv::Mat greyData(rows, cols, CV_8UC1,(void *) grey_image);
+	//write Mat object to file
+	cv::imwrite(output_file.c_str(), greyData);
 }

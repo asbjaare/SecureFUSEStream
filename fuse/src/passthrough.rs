@@ -13,7 +13,8 @@ use std::os::unix::ffi::{OsStrExt, OsStringExt};
 use std::os::unix::io::{FromRawFd, IntoRawFd};
 use std::path::{Path, PathBuf};
 use std::process::{Command, Output};
-use std::time::{Duration, SystemTime};
+use std::time::{Duration, SystemTime, Instant};
+
 
 use crate::libc_extras::libc;
 use crate::libc_wrappers;
@@ -239,6 +240,8 @@ impl FilesystemMT for PassthroughFS {
     }
 
 
+
+
     fn release(
         &self,
         _req: RequestInfo,
@@ -252,20 +255,29 @@ impl FilesystemMT for PassthroughFS {
         info!("Finished writing to file.");
 
         // Convert the path to a string
-        let path_str = path.to_str().expect("Failed to convert path to string").to_string();
+        let path_str = path
+            .to_str()
+            .expect("Failed to convert path to string")
+            .to_string();
 
         // Define the binary name
-        let binary_name = "./my_video_app".to_string();
+        let binary_name = "video_tee".to_string();
 
         // Define the argument for the binary
         let arg = format!("./mountpoint/{}", path_str);
 
         // Spawn a new thread to execute the command
         thread::spawn(move || {
-            let output: Output = Command::new(&binary_name)
+            let start = Instant::now();
+
+            let output: Output = Command::new("sudo")
+                .arg(&binary_name)
                 .arg(&arg)
                 .output()
                 .expect("Failed to execute process");
+
+            let duration = start.elapsed();
+            println!("Time elapsed in running the command: {:?} for file {:?}", duration, path_str);
 
             if output.status.success() {
                 println!("stdout: {}", String::from_utf8_lossy(&output.stdout));
@@ -276,6 +288,7 @@ impl FilesystemMT for PassthroughFS {
 
         libc_wrappers::close(fh)
     }
+
 
 
 
