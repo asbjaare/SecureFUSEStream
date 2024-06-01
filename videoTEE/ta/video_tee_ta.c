@@ -222,6 +222,47 @@ TEE_Result sign_digest(video_ta_sess_t *sess_ctx)
   return res;
 }
 
+/* Save to secure storage */
+static TEE_Result save_secure(video_ta_sess_t *sess_ctx, void *data, size_t data_size)
+{
+  TEE_Result res = TEE_SUCCESS;
+  TEE_ObjectHandle obj_handle;
+
+  size_t obj_id_size = DIGEST_SIZE;
+  char *obj_id = TEE_Malloc(obj_id_size, 0);
+  if (obj_id == NULL)
+    return TEE_ERROR_OUT_OF_MEMORY;
+
+  TEE_MemMove(obj_id, sess_ctx->digest, obj_id_size);
+
+	uint32_t obj_data_flag = TEE_DATA_FLAG_ACCESS_READ |		/* we can later read the oject */
+                           TEE_DATA_FLAG_ACCESS_WRITE |		/* we can later write into the object */
+                           TEE_DATA_FLAG_ACCESS_WRITE_META |	/* we can later destroy or rename the object */
+                           TEE_DATA_FLAG_OVERWRITE;		/* destroy existing object of same ID */
+
+  res = TEE_CreatePersistentObject(TEE_STORAGE_PRIVATE,
+                                   obj_id, obj_id_size,
+                                   obj_data_flag,
+                                   TEE_HANDLE_NULL,
+                                   NULL, 0,
+                                   &obj_handle);
+  if (res != TEE_SUCCESS) {
+    EMSG("Failed to creat persistent object 0x%08x", res);
+    return res;
+  }
+
+  res = TEE_WriteObjectData(obj_handle, data, data_size);
+	if (res != TEE_SUCCESS) {
+		EMSG("TEE_WriteObjectData failed 0x%08x", res);
+		TEE_CloseAndDeletePersistentObject1(obj_handle);
+	} else {
+		TEE_CloseObject(obj_handle);
+	}
+
+  TEE_Free(obj_id);
+  return res;
+}
+
 /* Increment the value and sign the result */
 static TEE_Result inc_and_sign(video_ta_sess_t *sess_ctx,
                              uint32_t param_types, TEE_Param params[4])
