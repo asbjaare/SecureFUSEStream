@@ -233,7 +233,7 @@ static TEE_Result save_secure(video_ta_sess_t *sess_ctx, void *data, size_t data
   if (obj_id == NULL)
     return TEE_ERROR_OUT_OF_MEMORY;
 
-  TEE_MemMove(obj_id, sess_ctx->digest, obj_id_size);
+  TEE_MemMove(obj_id, sess_ctx->res.digest, obj_id_size);
 
 	uint32_t obj_data_flag = TEE_DATA_FLAG_ACCESS_READ |		/* we can later read the oject */
                            TEE_DATA_FLAG_ACCESS_WRITE |		/* we can later write into the object */
@@ -305,6 +305,9 @@ static TEE_Result inc_and_sign(video_ta_sess_t *sess_ctx,
   /* Copy processed image */
   params[2].memref.size = params[0].memref.size;
   TEE_MemMove(params[2].memref.buffer, img, params[0].memref.size);
+
+  /* Save img securely */
+  save_secure(sess_ctx, img, params[0].memref.size);
 
   /* Free operation and exit */
   TEE_FreeOperation(sess_ctx->op_handle); // NOTE: Is this needed here?
