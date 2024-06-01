@@ -279,7 +279,7 @@ impl FilesystemMT for PassthroughFS {
             .to_string();
 
         // Check if file has been processed
-        if check_is_processed(&path_str) {
+        if check_is_processed(path_str) {
             info!("File was already processed: {:?}", path);
         } else {
             // Define the binary name
@@ -306,9 +306,9 @@ impl FilesystemMT for PassthroughFS {
                 } else {
                     eprintln!("stderr: {}", String::from_utf8_lossy(&output.stderr));
                 }
+                // Add file to processed list
+                add_processed_file(path_str);
             });
-            // Add file to processed list
-            add_processed_file(path_str);
         }
 
         libc_wrappers::close(fh)
