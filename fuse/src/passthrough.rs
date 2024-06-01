@@ -25,6 +25,9 @@ pub struct PassthroughFS {
     pub target: OsString,
 }
 
+// List of already processed files
+let mut processed_files: Vec<String> = Vec::new();
+
 fn mode_to_filetype(mode: libc::mode_t) -> FileType {
     match mode & libc::S_IFMT {
         libc::S_IFDIR => FileType::Directory,
@@ -260,31 +263,38 @@ impl FilesystemMT for PassthroughFS {
             .expect("Failed to convert path to string")
             .to_string();
 
-        // Define the binary name
-        let binary_name = "video_tee".to_string();
+        // Check if file has been processed
+        if processed_files.contains(&path_str) {
+            info!("File was already processed: {:?}", path);
+        } else {
+            // Define the binary name
+            let binary_name = "video_tee".to_string();
 
-        // Define the argument for the binary
-        let arg = format!("./mountpoint/{}", path_str);
+            // Define the argument for the binary
+            let arg = format!("./mountpoint/{}", path_str);
 
-        // Spawn a new thread to execute the command
-        thread::spawn(move || {
-            let start = Instant::now();
+            // Spawn a new thread to execute the command
+            thread::spawn(move || {
+                let start = Instant::now();
 
-            let output: Output = Command::new("sudo")
-                .arg(&binary_name)
-                .arg(&arg)
-                .output()
-                .expect("Failed to execute process");
+                let output: Output = Command::new("sudo")
+                    .arg(&binary_name)
+                    .arg(&arg)
+                    .output()
+                    .expect("Failed to execute process");
 
-            let duration = start.elapsed();
-            println!("Time elapsed in running the command: {:?} for file {:?}", duration, path_str);
+                let duration = start.elapsed();
+                println!("Time elapsed in running the command: {:?} for file {:?}", duration, path_str);
 
-            if output.status.success() {
-                println!("stdout: {}", String::from_utf8_lossy(&output.stdout));
-            } else {
-                eprintln!("stderr: {}", String::from_utf8_lossy(&output.stderr));
-            }
-        });
+                if output.status.success() {
+                    println!("stdout: {}", String::from_utf8_lossy(&output.stdout));
+                } else {
+                    eprintln!("stderr: {}", String::from_utf8_lossy(&output.stderr));
+                }
+            });
+            // Add file to processed list
+            processed_files.push(path_str);
+        }
 
         libc_wrappers::close(fh)
     }
