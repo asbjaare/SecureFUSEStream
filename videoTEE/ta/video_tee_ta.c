@@ -307,7 +307,11 @@ static TEE_Result inc_and_sign(video_ta_sess_t *sess_ctx,
   TEE_MemMove(params[2].memref.buffer, img, params[0].memref.size);
 
   /* Save img securely */
-  save_secure(sess_ctx, img, params[0].memref.size);
+  res = save_secure(sess_ctx, img, params[0].memref.size);
+  if (res != TEE_SUCCESS) {
+    EMSG("Failed to save img securely with error 0x%x", res);
+    return res;
+  }
 
   /* Free operation and exit */
   TEE_FreeOperation(sess_ctx->op_handle); // NOTE: Is this needed here?

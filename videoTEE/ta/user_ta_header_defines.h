@@ -5,7 +5,7 @@
 
 #define TA_UUID TA_VIDEO_TEE_UUID
 
-#define TA_FLAGS TA_FLAG_SINGLE_INSTANCE
+#define TA_FLAGS TA_FLAG_MULTI_SESSION
 
 /* Stack and heap size for TA */
 #define TA_STACK_SIZE (2 * 1024)
