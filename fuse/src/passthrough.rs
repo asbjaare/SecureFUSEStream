@@ -279,7 +279,7 @@ impl FilesystemMT for PassthroughFS {
             .to_string();
 
         // Check if file has been processed
-        if check_is_processed(path_str) {
+        if check_is_processed(&path_str) {
             info!("File was already processed: {:?}", path);
         } else {
             // Define the binary name
