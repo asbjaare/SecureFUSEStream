@@ -14,6 +14,8 @@ use std::os::unix::io::{FromRawFd, IntoRawFd};
 use std::path::{Path, PathBuf};
 use std::process::{Command, Output};
 use std::time::{Duration, SystemTime, Instant};
+use std::sync::Mutex;
+use lazy_static::lazy_static;
 
 
 use crate::libc_extras::libc;
@@ -26,7 +28,20 @@ pub struct PassthroughFS {
 }
 
 // List of already processed files
-let mut processed_files: Vec<String> = Vec::new();
+lazy_static! {
+    static ref STRING_LIST: Mutex<Vec<String>> = Mutex::new(Vec::new());
+}
+
+fn add_processed_file(s: String) {
+    let mut list = STRING_LIST.lock().unwrap();
+    list.push(s);
+}
+
+fn check_is_processed(s: &str) -> bool {
+    let list = STRING_LIST.lock().unwrap();
+    list.contains(&s.to_string())
+}
+
 
 fn mode_to_filetype(mode: libc::mode_t) -> FileType {
     match mode & libc::S_IFMT {
@@ -264,7 +279,7 @@ impl FilesystemMT for PassthroughFS {
             .to_string();
 
         // Check if file has been processed
-        if processed_files.contains(&path_str) {
+        if check_is_processed(&path_str) {
             info!("File was already processed: {:?}", path);
         } else {
             // Define the binary name
@@ -293,7 +308,7 @@ impl FilesystemMT for PassthroughFS {
                 }
             });
             // Add file to processed list
-            processed_files.push(path_str);
+            add_processed_file(path_str);
         }
 
         libc_wrappers::close(fh)
