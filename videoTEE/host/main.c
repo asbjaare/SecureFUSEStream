@@ -4,8 +4,8 @@
  */
 
 #include <err.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 /* OP-TEE client API for communicating with the TA */
@@ -21,17 +21,15 @@
 #define DIGEST_SIZE (256 / 8)
 
 /* Helper to print hex values */
-void print_hex(uint8_t *buf, size_t len)
-{
+void print_hex(uint8_t *buf, size_t len) {
   for (size_t i = 0; i < len; i++) {
-      printf("%02x", buf[i]);
+    printf("%02x", buf[i]);
   }
   printf("\n");
 }
 
 /* Load an image into memory */
-void load_img(char *path, RGB **img, img_meta_t *metadata)
-{
+void load_img(char *path, RGB **img, img_meta_t *metadata) {
   /* Get image dimensions */
   int width, height;
   GetSize(path, &width, &height);
@@ -45,23 +43,21 @@ void load_img(char *path, RGB **img, img_meta_t *metadata)
   LoadRegion(path, 0, 0, width, height, *img);
 
   /* Set metadata */
-  (metadata->width) = (uint32_t) width;
-  (metadata->height) = (uint32_t) height;
+  (metadata->width) = (uint32_t)width;
+  (metadata->height) = (uint32_t)height;
 
   return;
 }
 
 /* Write an image from memory to disk */
-void write_img(char *path, RGB *img, img_meta_t *metadata)
-{
+void write_img(char *path, RGB *img, img_meta_t *metadata) {
   /* Create BMP file */
   CreateBMP(path, metadata->width, metadata->height);
   /* Write image data */
   WriteRegion(path, 0, 0, metadata->width, metadata->height, img);
 }
 
-int main(void)
-{
+int main(int argc, char *argv[]) {
   /* OP-TEE constructs */
   TEEC_UUID uuid = TA_VIDEO_TEE_UUID;
   TEEC_Result res;
@@ -79,27 +75,30 @@ int main(void)
     errx(EXIT_FAILURE, "Failed to initialize TEE Context with code 0x%x", res);
 
   /* Open a session to connect to the TA */
-  res = TEEC_OpenSession(&ctx, &sess, &uuid, TEEC_LOGIN_PUBLIC, 
-                         NULL, NULL, &err_origin);
+  res = TEEC_OpenSession(&ctx, &sess, &uuid, TEEC_LOGIN_PUBLIC, NULL, NULL,
+                         &err_origin);
   if (res != TEEC_SUCCESS) {
-    errx(EXIT_FAILURE, "Failed to open session to TA with code 0x%x, origin 0x%x",
-         res, err_origin);
+    errx(EXIT_FAILURE,
+         "Failed to open session to TA with code 0x%x, origin 0x%x", res,
+         err_origin);
   }
 
   /* Clear operation struct */
   memset(&op, 0, sizeof(op));
 
   /* Insert argument for TA invocation. */
-  op.paramTypes = TEEC_PARAM_TYPES(TEEC_MEMREF_TEMP_INPUT, TEEC_MEMREF_TEMP_OUTPUT,
-                                   TEEC_MEMREF_TEMP_OUTPUT, TEEC_NONE);
+  op.paramTypes =
+      TEEC_PARAM_TYPES(TEEC_MEMREF_TEMP_INPUT, TEEC_MEMREF_TEMP_OUTPUT,
+                       TEEC_MEMREF_TEMP_OUTPUT, TEEC_NONE);
 
   /* Load image into memref to send to TA */
   img_meta_t *metadata = calloc(1, sizeof(img_meta_t));
-  load_img("/home/oty000/marguerite.bmp", &img, metadata);
+  load_img(argv[1], &img, metadata);
   if (img == NULL)
     err(EXIT_FAILURE, "failed to load image");
 
-  op.params[0].tmpref.size = (size_t)(sizeof(RGB) * metadata->width * metadata->height);
+  op.params[0].tmpref.size =
+      (size_t)(sizeof(RGB) * metadata->width * metadata->height);
   op.params[0].tmpref.buffer = img;
 
   /* Initialize output memref parameters */
@@ -115,7 +114,6 @@ int main(void)
     errx(EXIT_FAILURE, "Failed to allocate buffer for result image");
   op.params[2].tmpref.buffer = res_img;
 
-
   /*
    * Invoke TA to increment number, hash the result and
    * sign it with its hardware key
@@ -124,11 +122,14 @@ int main(void)
   res = TEEC_InvokeCommand(&sess, TA_VIDEO_INC_SIGN, &op, &err_origin);
   printf("Success\n");
   if (res != TEEC_SUCCESS)
-    errx(EXIT_FAILURE, "TA invocation failed with code 0x%x, origin 0x%x",
-         res, err_origin);
+    errx(EXIT_FAILURE, "TA invocation failed with code 0x%x, origin 0x%x", res,
+         err_origin);
 
+  char new_filename[256]; // Adjust size as needed based on the maximum expected
+                          // path length
   /* Write processed image to disk */
-  write_img("/home/oty000/grayscale.bmp", res_img, metadata);
+  sprintf(new_filename, "gray%s", argv[1]);
+  write_img(new_filename, res_img, metadata);
 
   /* ------------------- PRINTS ------------------- */
 
