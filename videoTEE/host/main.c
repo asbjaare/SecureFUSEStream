@@ -20,6 +20,21 @@
 /* Size of buffer to receive hash */
 #define DIGEST_SIZE (256 / 8)
 
+/* Timer helper courtesy of Morten Grønnesby */
+unsigned long long gettime()
+{
+    struct timeval tv;
+    if (gettimeofday(&tv, NULL) == -1)
+    {
+        fprintf(stderr, "Could not get time\n");
+        return -1;
+    }
+
+    unsigned long long micros = 1000000 * tv.tv_sec + tv.tv_usec;
+
+    return micros;
+}
+
 /* Helper to print hex values */
 void print_hex(uint8_t *buf, size_t len) {
   for (size_t i = 0; i < len; i++) {
@@ -95,7 +110,7 @@ int main(int argc, char *argv[]) {
   img_meta_t *metadata = calloc(1, sizeof(img_meta_t));
   load_img(argv[1], &img, metadata);
   if (img == NULL)
-    err(EXIT_FAILURE, "failed to load image");
+    errx(EXIT_FAILURE, "failed to load image");
 
   op.params[0].tmpref.size =
       (size_t)(sizeof(RGB) * metadata->width * metadata->height);
@@ -125,25 +140,27 @@ int main(int argc, char *argv[]) {
     errx(EXIT_FAILURE, "TA invocation failed with code 0x%x, origin 0x%x", res,
          err_origin);
 
-  char new_filename[256]; // Adjust size as needed based on the maximum expected
+  // Print timestamp of successful computation
+  printf("%lld\n", gettime());
+  // char new_filename[256]; // Adjust size as needed based on the maximum expected
                           // path length
   /* Write processed image to disk */
-  sprintf(new_filename, "gray%s", argv[1]);
-  write_img(new_filename, res_img, metadata);
+  // sprintf(new_filename, "gray%s", argv[1]);
+  // write_img(new_filename, res_img, metadata);
 
   /* ------------------- PRINTS ------------------- */
 
-  printf("Hash of result: ");
-  print_hex(res_buf->digest, DIGEST_SIZE);
-
-  printf("Signed hash: ");
-  print_hex(res_buf->signature, SIGNATURE_SIZE);
-
-  printf("Pubkey x component: ");
-  print_hex(res_buf->pub_key_x, res_buf->pub_key_x_size);
-
-  printf("Pubkey y component: ");
-  print_hex(res_buf->pub_key_y, res_buf->pub_key_y_size);
+  // printf("Hash of result: ");
+  // print_hex(res_buf->digest, DIGEST_SIZE);
+  //
+  // printf("Signed hash: ");
+  // print_hex(res_buf->signature, SIGNATURE_SIZE);
+  //
+  // printf("Pubkey x component: ");
+  // print_hex(res_buf->pub_key_x, res_buf->pub_key_x_size);
+  //
+  // printf("Pubkey y component: ");
+  // print_hex(res_buf->pub_key_y, res_buf->pub_key_y_size);
 
   /* Cleanup session and context */
   TEEC_CloseSession(&sess);
