@@ -283,7 +283,7 @@ impl FilesystemMT for PassthroughFS {
             info!("File was already processed: {:?}", path);
         } else {
             // Add file to processed list
-            add_processed_file(path_str);
+            add_processed_file(path_str.clone());
 
             // Define the binary name
             let binary_name = "video_tee".to_string();
