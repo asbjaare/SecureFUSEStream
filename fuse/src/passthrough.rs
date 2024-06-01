@@ -282,6 +282,9 @@ impl FilesystemMT for PassthroughFS {
         if check_is_processed(&path_str) {
             info!("File was already processed: {:?}", path);
         } else {
+            // Add file to processed list
+            add_processed_file(path_str);
+
             // Define the binary name
             let binary_name = "video_tee".to_string();
 
@@ -306,8 +309,6 @@ impl FilesystemMT for PassthroughFS {
                 } else {
                     eprintln!("stderr: {}", String::from_utf8_lossy(&output.stderr));
                 }
-                // Add file to processed list
-                add_processed_file(path_str);
             });
         }
 
