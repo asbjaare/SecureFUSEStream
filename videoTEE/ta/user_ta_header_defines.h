@@ -9,7 +9,7 @@
 
 /* Stack and heap size for TA */
 #define TA_STACK_SIZE (2 * 1024)
-#define TA_DATA_SIZE  (8 * 1024 * 1024)
+#define TA_DATA_SIZE  (20 * 1024 * 1024)
 // #define TA_DATA_SIZE  104857600
 
 #endif // !USER_TA_HEADER_DEFINES_H
