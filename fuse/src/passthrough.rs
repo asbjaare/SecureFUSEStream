@@ -288,7 +288,7 @@ impl FilesystemMT for PassthroughFS {
 
             // Spawn a new thread to execute the command
             thread::spawn(move || {
-                let start = Instant::now();
+                let start = Instant::now().elapsed();
 
                 let output: Output = Command::new(&binary_name)
                     .arg(&arg)
@@ -296,27 +296,25 @@ impl FilesystemMT for PassthroughFS {
                     .output()
                     .expect("Failed to execute process");
 
-                let duration = start.elapsed();
-                let end = Instant::now();
+                if output.status.success() {
+                    println!("stdout: {}", String::from_utf8_lossy(&output.stdout));
+                } else {
+                    eprintln!("stderr: {}", String::from_utf8_lossy(&output.stderr));
+                }
+                let end = Instant::now().elapsed();
                 // Write timing information to a file
                 let mut file = std::fs::OpenOptions::new()
-                    .append(true)
+                    .truncate(true)
                     .create(true)
                     .open("timing_log.txt")
                     .expect("Failed to open timing file");
 
                 writeln!(
                     file,
-                    "File: {}, Start: {:?}, Duration: {:?}, End: {:?}",
-                    path_str, start, duration, end
+                    "File: {}, Start: {:?}, End: {:?}",
+                    path_str, start, end
                 )
                 .expect("Failed to write to timing file");
-
-                if output.status.success() {
-                    println!("stdout: {}", String::from_utf8_lossy(&output.stdout));
-                } else {
-                    eprintln!("stderr: {}", String::from_utf8_lossy(&output.stderr));
-                }
             });
         } else {
             info!("File is not a BMP file: {:?}", path);
