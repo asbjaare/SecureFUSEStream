@@ -32,7 +32,7 @@ static LOGGER: ConsoleLogger = ConsoleLogger;
 
 fn main() {
     log::set_logger(&LOGGER).unwrap();
-    log::set_max_level(log::LevelFilter::Info);
+    log::set_max_level(log::LevelFilter::Warn);
 
     let args: Vec<OsString> = env::args_os().collect();
 

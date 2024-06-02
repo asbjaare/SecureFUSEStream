@@ -1,0 +1,486 @@
+File: /marguerite.bmp, Start: Instant { tv_sec: 2332894, tv_nsec: 32976616 }, Duration: 47.652348ms, End: Instant { tv_sec: 2332894, tv_nsec: 80629060 }
+File: /marguerite.bmp, Start: Instant { tv_sec: 2335622, tv_nsec: 428667609 }, Duration: 206.531942ms, End: Instant { tv_sec: 2335622, tv_nsec: 635199679 }
+File: /image_copy_10.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 676445886 }, Duration: 7.746231162s, End: Instant { tv_sec: 2335741, tv_nsec: 422677176 }
+File: File: /image_copy_106.bmp/image_copy_116.bmp, Start: , Start: InstantInstant {  { tv_sectv_sec: : 23357332335733, , tv_nsectv_nsec: : 655636871708669796 } }, Duration: , Duration: 77..798983766745965817ss, End: , End: InstantInstant {  { tv_sectv_sec: : 23357412335741, , tv_nsectv_nsec: : 454620765454635741 } }
+
+File: /image_copy_11.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 726821712 }, Duration: 7.732056927s, End: Instant { tv_sec: 2335741, tv_nsec: 458878767 }
+File: /image_copy_111.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 685622660 }, Duration: 7.776666457sFile: , End: Instant { /image_copy_114.bmptv_sec, Start: : Instant2335741 { , tv_sectv_nsec: : 2335733462289213,  }tv_nsec
+: 699153725 }, Duration: 7.763234337s, End: Instant { tv_sec: 2335741, tv_nsec: 462388190 }
+File: /image_copy_112.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 690361976 }, Duration: 7.772201543s, End: Instant { tv_sec: 2335741, tv_nsec: 462563615 }
+File: /image_copy_104.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 644421336 }, Duration: 7.819445036s, End: Instant { tv_sec: 2335741, tv_nsec: 463866500 }
+File: /image_copy_128.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 825302987 }, Duration: 7.710099844s, End: Instant { tv_sec: 2335741, tv_nsec: 535402991 }
+File: /image_copy_155.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 304706462 }, Duration: 9.76717214s, End: Instant { tv_sec: 2335744, tv_nsec: 71878730 }
+File: /image_copy_150.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 246631211 }, Duration: 22.715511759s, End: Instant { tv_sec: 2335756, tv_nsec: 962143098 }
+File: /image_copy_149.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 213921027 }, Duration: 22.787056473s, End: Instant { tv_sec: 2335757, tv_nsec: 977692 }
+File: /image_copy_14.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 244056577 }, Duration: 22.766266722s, End: Instant { tv_sec: 2335757, tv_nsec: 10323715 }
+File: /image_copy_151.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 262914799 }, Duration: 22.789306754s, End: Instant { tv_sec: 2335757, tv_nsec: 52221713 }
+File: /image_copy_145.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 989833243 }, Duration: 45.500170374s, End: Instant { tv_sec: 2335779, tv_nsec: 490003745 }
+File: File: /image_copy_311.bmp/image_copy_349.bmp, Start: , Start: InstantInstant {  { tv_sectv_sec: : 23357362335736, , tv_nsectv_nsec: : 206329124848963680 } }, Duration: , Duration: 4544..597605277954978625ss, End: , End: InstantInstant {  { tv_sectv_sec: : 23357812335781, , tv_nsectv_nsec: : 803934497803942465 } }
+
+File: /image_copy_179.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 757157216 }, Duration: 47.047139939s, End: Instant { tv_sec: 2335781, tv_nsec: 804297283 }
+File: /image_copy_320.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 303844251 }, Duration: 45.503546325s, End: Instant { tv_sec: 2335781, tv_nsec: 807390672 }
+File: /image_copy_180.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 775089610 }, Duration: 47.03372398s, End: Instant { tv_sec: 2335781, tv_nsec: 808813686 }
+File: /image_copy_310.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 195593015 }, Duration: 45.613425408s, End: Instant { tv_sec: 2335781, tv_nsec: 809018519 }
+File: /image_copy_351.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 889252936 }, Duration: 44.921546454s, End: Instant { tv_sec: 2335781, tv_nsec: 810799518 }
+File: File: /image_copy_170.bmp/image_copy_495.bmp, Start: , Start: InstantInstant {  { tv_sectv_sec: : 23357342335739, , tv_nsectv_nsec: : 67208236464692516 } }, Duration: , Duration: 4742..140949643748343427ss, End: , End: InstantInstant {  { tv_sectv_sec: : 23357812335781, , tv_nsectv_nsec: : 813032135813036039 } }
+
+File: /image_copy_486.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 959181675 }, Duration: 42.857086826s, End: Instant { tv_sec: 2335781, tv_nsec: 816268661 }
+File: /image_copy_322.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 328798339 }, Duration: 45.488709559s, End: Instant { tv_sec: 2335781, tv_nsec: 817507994 }
+File: /image_copy_343.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 774442472 }, Duration: 45.043326451s, End: Instant { tv_sec: 2335781, tv_nsec: 817769019 }
+File: /image_copy_359.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 978514173 }, Duration: 44.841174502s, End: Instant { tv_sec: 2335781, tv_nsec: 819688803 }
+File: /image_copy_160.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 480449180 }, Duration: 47.339906442s, End: Instant { tv_sec: 2335781, tv_nsec: 820355718 }
+File: /image_copy_313.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 227474172 }, Duration: 45.597162268s, End: Instant { tv_sec: 2335781, tv_nsec: 824636536 }
+File: /image_copy_182.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 789436390 }, Duration: 47File: .035293906/image_copy_479.bmps, Start: , End: InstantInstant {  { tv_sectv_sec: : 23357382335781, , tv_nsectv_nsec: : 856538239824730488 } }, Duration: 
+42.968287065s, End: Instant { tv_sec: 2335781, tv_nsec: 824825432 }
+File: /image_copy_485.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 949958757 }, Duration: 42.877027612s, End: Instant { tv_sec: 2335781, tv_nsec: 826986497 }
+File: /image_copy_501.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 175811732 }, Duration: 42.653001429s, End: Instant { tv_sec: 2335781, tv_nsec: 828813257 }
+File: /image_copy_502.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 183611572 }, Duration: 42.646606683s, End: Instant { tv_sec: 2335781, tv_nsec: 830218351 }
+File: /image_copy_194.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 955990750 }, Duration: 46.87452261s, End: Instant { tv_sec: 2335781, tv_nsec: 830513456 }
+File: /image_copy_314.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 234332185 }, Duration: 45.596432216s, End: Instant { tv_sec: 2335781, tv_nsec: 830764497 }
+File: /image_copy_30.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 185982191 }, Duration: 45.648926611s, End: Instant { tv_sec: 2335781, tv_nsec: 834908898 }
+File: /image_copy_315.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 242977117 }, Duration: 45.592737417s, End: Instant { tv_sec: 2335781, tv_nsec: 835714630 }
+File: /image_copy_480.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 882379466 }, Duration: 42.953730877s, End: Instant { tv_sec: 2335781, tv_nsec: 836110439 }
+File: /image_copy_49.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 131235193 }, Duration: 42.705115951s, End: Instant { tv_sec: 2335781, tv_nsec: 836351272 }
+File: File: /image_copy_326.bmp, Start: /image_copy_487.bmpInstant, Start:  { Instanttv_sec { : tv_sec2335736: , 2335738tv_nsec, : tv_nsec367744614:  }969596631, Duration:  }45, Duration: .42469861736.s868014455, End: sInstant, End:  { Instanttv_sec { : tv_sec2335781: , 2335781tv_nsec, : tv_nsec837606478:  }837611182
+ }
+File: /image_copy_31.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 295579385 }, Duration: 45.542346806s, End: Instant { tv_sec: 2335781, tv_nsec: 837926255 }
+File: /image_copy_348.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 838434004 }, Duration: 45.00359982s, End: Instant { tv_sec: 2335781, tv_nsec: 842033920 }
+File: /image_copy_482.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 908922425 }, Duration: 42.93429982s, End: Instant { tv_sec: 2335781, tv_nsec: 843222373 }
+File: /image_copy_195.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 962625242 }, Duration: 46.894177988s, End: Instant { tv_sec: 2335781, tv_nsec: 856803358 }
+File: /image_copy_185.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 838278898 }, Duration: 47.022291867s, End: Instant { tv_sec: 2335781, tv_nsec: 860570861 }
+File: /image_copy_214.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 253856186 }, Duration: 46.61409925s, End: File: Instant { tv_sec/image_copy_186.bmp: , Start: 2335781Instant,  { tv_nsectv_sec: : 2335734867955596,  }tv_nsec
+: 850629350 }, Duration: 47.017426086s, End: Instant { tv_sec: 2335781, tv_nsec: 868055532 }
+File: /image_copy_124.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 766365973 }, Duration: 48.504620389s, End: Instant { tv_sec: 2335782, tv_nsec: 270986490 }
+File: /image_copy_522.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 444541814 }, Duration: 42.979577025s, End: Instant { tv_sec: 2335782, tv_nsec: 424118967 }
+File: /image_copy_494.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 58781323 }, Duration: 43.394544422s, End: Instant { tv_sec: 2335782, tv_nsec: 453325873 }
+File: /image_copy_497.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 84031188 }, Duration: 43.378594531s, End: Instant { tv_sec: 2335782, tv_nsec: 462625847 }
+File: /image_copy_519.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 394442020 }, Duration: 43.104062569s, End: Instant { tv_sec: 2335782, tv_nsec: 498504717 }
+File: /image_copy_356.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 951093610 }, Duration: 45.554108382s, End: Instant { tv_sec: 2335782, tv_nsec: 505202184 }
+File: /image_copy_430.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 884274627 }, Duration: 44.959691464s, End: Instant { tv_sec: 2335782, tv_nsec: 843966219 }
+File: /image_copy_421.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 781854583 }, Duration: 45.067262473s, End: Instant { tv_sec: 2335782, tv_nsec: 849117184 }
+File: /image_copy_399.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 500720673 }, Duration: 45.356397216s, End: Instant { tv_sec: 2335782, tv_nsec: 857118017 }
+File: /image_copy_469.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 359921477 }, Duration: 44.502301106s, End: Instant { tv_sec: 2335782, tv_nsec: 862222679 }
+File: /image_copy_458.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 208768814 }, Duration: 44.654942671s, End: Instant { tv_sec: 2335782, tv_nsec: 863711613 }
+File: /image_copy_505.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 218585990 }, Duration: 43.648008195s, End: Instant { tv_sec: 2335782, tv_nsec: 866594281 }
+File: /image_copy_488.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 988306245 }, Duration: 43.965975313s, End: Instant { tv_sec: 2335782, tv_nsec: 954281686 }
+File: /image_copy_424.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 803577042 }, Duration: 45.155412471s, End: Instant { tv_sec: 2335782, tv_nsec: 958989609 }
+File: /image_copy_466.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 327067196 }, Duration: 44.63311509s, End: Instant { tv_sec: 2335782, tv_nsec: 960182478 }
+File: /image_copy_428.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 853335106 }, Duration: 45.107300046s, End: Instant { tv_sec: 2335782, tv_nsec: 960635248 }
+File: /image_copy_460.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 248585556 }, Duration: 44.719636444s, End: Instant { tv_sec: 2335782, tv_nsec: 968222416 }
+File: /image_copy_442.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 18468147 }, Duration: 44.950167422s, End: Instant { tv_sec: 2335782, tv_nsec: 968635729 }
+File: /image_copy_468.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 346523085 }, Duration: 44.622806439s, End: Instant { tv_sec: 2335782, tv_nsec: 969329652 }
+File: /image_copy_427.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 844344348 }, Duration: 45.128530951s, End: Instant { tv_sec: 2335782, tv_nsec: 972875427 }
+File: /image_copy_37.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 240541539 }, Duration: 45.735242156s, End: Instant { tv_sec: 2335782, tv_nsec: 975783823 }
+File: /image_copy_44.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 96696922 }, Duration: 44.884399595s, End: Instant { tv_sec: 2335782, tv_nsec: 981096741 }
+File: /image_copy_453.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 156075410 }, Duration: 44.829223141s, End: Instant { tv_sec: 2335782, tv_nsec: 985298647 }
+File: /image_copy_467.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 337408551 }, Duration: 44.653025061s, End: Instant { tv_sec: 2335782, tv_nsec: 990433676 }
+File: /image_copy_457.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 203187511 }, Duration: 44.810673751s, End: Instant { tv_sec: 2335783, tv_nsec: 13861358 }
+File: /image_copy_40.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 644036760 }, Duration: 45.370260696s, End: Instant { tv_sec: 2335783, tv_nsec: 14297552 }
+File: /image_copy_449.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 84783496 }, Duration: 44.932612564s, End: Instant { tv_sec: 2335783, tv_nsec: 17396348 }
+File: /image_copy_401.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 538308702 }, Duration: 45.482082635s, End: Instant { tv_sec: 2335783, tv_nsec: 20391433 }
+File: /image_copy_454.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 169164712 }, Duration: 44.85492936s, End: Instant { tv_sec: 2335783, tv_nsec: 24094136 }
+File: /image_copy_446.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 55445838 }, Duration: 44.994686999s, End: Instant { tv_sec: 2335783, tv_nsec: 50132965 }
+File: /image_copy_473.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 788463970 }, Duration: 44.26305924s, End: Instant { tv_sec: 2335783, tv_nsec: 51523338 }
+File: /image_copy_383.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 300156188 }, Duration: 45.754916221s, End: Instant { tv_sec: 2335783, tv_nsec: 55072473 }
+File: /image_copy_169.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 664051355 }, Duration: 48.39385825s, End: Instant { tv_sec: 2335783, tv_nsec: 57909669 }
+File: /image_copy_452.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 136716801 }, Duration: 44.926283257s, End: Instant { tv_sec: 2335783, tv_nsec: 63000154 }
+File: /image_copy_422.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 792940101 }, Duration: 45.274781577s, End: Instant { tv_sec: 2335783, tv_nsec: 67721774 }
+File: /image_copy_46.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 364427832 }, Duration: 44.703426998s, End: Instant { tv_sec: 2335783, tv_nsec: 67854958 }
+File: File: /image_copy_431.bmp, Start: /image_copy_432.bmpInstant, Start:  { Instanttv_sec { : tv_sec2335737: , 2335737tv_nsec, : tv_nsec892220324:  }904421495, Duration:  }45, Duration: .45179216825.s167071079, End: sInstant, End:  { Instanttv_sec { : tv_sec2335783: , 2335783tv_nsec, : tv_nsec71437245:  }71492702
+ }
+File: /image_copy_447.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 67806785 }, Duration: 45.004151039s, End: Instant { tv_sec: 2335783, tv_nsec: 71957952 }
+File: /image_copy_39.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 510040488 }, Duration: 45.565244325s, End: Instant { tv_sec: 2335783, tv_nsec: 75285197 }
+File: /image_copy_506.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 230704537 }, Duration: 43.846107547s, End: Instant { tv_sec: 2335783, tv_nsec: 76812244 }
+File: /image_copy_425.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 816695497 }, Duration: 45.26093915s, End: Instant { tv_sec: 2335783, tv_nsec: 77634743 }
+File: /image_copy_459.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 223071658 }, Duration: 44.856905783s, End: Instant { tv_sec: 2335783, tv_nsec: 79977697 }
+File: /image_copy_471.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 770854393 }, Duration: 44.310915695s, End: Instant { tv_sec: 2335783, tv_nsec: 81770344 }
+File: /image_copy_390.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 382233746 }, Duration: 45.701283582s, End: Instant { tv_sec: 2335783, tv_nsec: 83517456 }
+File: /image_copy_496.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 79289729 }, Duration: 44.009961063s, End: Instant { tv_sec: 2335783, tv_nsec: 89250888 }
+File: /image_copy_118.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 716718886 }, Duration: 75.352566123s, End: Instant { tv_sec: 2335809, tv_nsec: 69285137 }
+File: /image_copy_141.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 951819580 }, Duration: 75.122422794s, End: Instant { tv_sec: 2335809, tv_nsec: 74242470 }
+File: File: /image_copy_153.bmp, Start: Instant/image_copy_156.bmp { , Start: tv_secInstant:  { 2335734tv_sec, : tv_nsec2335734: , 301478096tv_nsec }: , Duration: 39605666781 }., Duration: 12692958681s., End: 043310805Instants { , End: tv_secInstant:  { 2335815tv_sec, : tv_nsec2335815: , 428407810tv_nsec }: 
+439367568 }
+File: /image_copy_147.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 170770478 }, Duration: 81.270918315s, End: Instant { tv_sec: 2335815, tv_nsec: 441688921 }
+File: /image_copy_146.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 152806147 }, Duration: 81.289289144s, End: Instant { tv_sec: 2335815, tv_nsec: 442095355 }
+File: /image_copy_152.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 278657425 }, Duration: 81.192965861s, End: Instant { tv_sec: 2335815, tv_nsec: 471623414 }
+File: /image_copy_159.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 430920173 }, Duration: 81.040811913s, End: Instant { tv_sec: 2335815, tv_nsec: 471732278 }
+File: /image_copy_157.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 408098606 }, Duration: 81.063707176s, End: Instant { tv_sec: 2335815, tv_nsec: 471805846 }
+File: /image_copy_154.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 301384944 }, Duration: 81.170481223s, End: Instant { tv_sec: 2335815, tv_nsec: 471866231 }
+File: /image_copy_136.bmp, Start: InstantFile:  { tv_sec: 2335733, tv_nsec/image_copy_158.bmp: , Start: 897404281Instant } { , Duration: tv_sec81: .2335734588864569, stv_nsec, End: : Instant412455616 {  }tv_sec, Duration: : 812335815., 091611836tv_nsecs: , End: 486268946Instant } { 
+tv_sec: 2335815, tv_nsec: 504067516 }
+File: /image_copy_183.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 816074358 }, Duration: 85.631803704s, End: Instant { tv_sec: 2335820, tv_nsec: 447878190 }
+File: /image_copy_163.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 498053765 }, Duration: 85.951463856s, End: Instant { tv_sec: 2335820, tv_nsec: 449517685 }
+File: /image_copy_331.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 457464573 }, Duration: 83.996845452s, End: Instant { tv_sec: 2335820, tv_nsec: 454310121 }
+File: /image_copy_336.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 697188198 }, Duration: 83.762860475s, End: Instant { tv_sec: 2335820, tv_nsec: 460048769 }
+File: /image_copy_198.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 996036421 }, Duration: 85.483757326s, End: Instant { tv_sec: 2335820, tv_nsec: 479793843 }
+File: /image_copy_483.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 918702114 }, Duration: 81.643754184s, End: Instant { tv_sec: 2335820, tv_nsec: 562456426 }
+File: /image_copy_354.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 919370662 }, Duration: 83.666492741s, End: Instant { tv_sec: 2335820, tv_nsec: 585863531 }
+File: /image_copy_498.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 100764666 }, Duration: 81.495913054s, End: Instant { tv_sec: 2335820, tv_nsec: 596677848 }
+File: /image_copy_504.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 204081482 }, Duration: 81.401284626s, End: Instant { tv_sec: 2335820, tv_nsec: 605366172 }
+File: /image_copy_478.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 832755931 }, Duration: 81.773049539s, End: Instant { tv_sec: 2335820, tv_nsec: 605805566 }
+File: /image_copy_319.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 289414239 }, Duration: 84.319528172s, End: Instant { tv_sec: 2335820, tv_nsec: 608942539 }
+File: /image_copy_4.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 139702397 }, Duration: 81.474264227s, End: Instant { tv_sec: 2335820, tv_nsec: 613966720 }
+File: /image_copy_189.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 903317378 }, Duration: 85.714473646s, End: Instant { tv_sec: 2335820, tv_nsec: 617791088 }
+File: /image_copy_490.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 12267273 }, Duration: 81.609061013s, End: Instant { tv_sec: 2335820, tv_nsec: 621328414 }
+File: /image_copy_338.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 715914804 }, Duration: 83.910194878s, End: Instant { tv_sec: 2335820, tv_nsec: 626109746 }
+File: /image_copy_167.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 623273360 }, Duration: 86.006606898s, End: Instant { tv_sec: 2335820, tv_nsec: 629880482 }
+File: /image_copy_341.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 754573365 }, Duration: 83.882193866s, End: Instant { tv_sec: 2335820, tv_nsec: 636767359 }
+File: /image_copy_196.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 977789977 }, Duration: 85.665903714s, End: Instant { tv_sec: 2335820, tv_nsec: 643693819 }
+File: /image_copy_500.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 167664754 }, Duration: 81.481472512s, End: Instant { tv_sec: 2335820, tv_nsec: 649137362 }
+File: /image_copy_48.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 2118398 }, Duration: 81.650592387s, End: Instant { tv_sec: 2335820, tv_nsec: 652710881 }
+File: /image_copy_481.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 894085531 }, Duration: 81.763020664s, End: Instant { tv_sec: 2335820, tv_nsec: 657106291 }
+File: File: /image_copy_187.bmp, Start: /image_copy_352.bmpInstant, Start:  { Instanttv_sec { : tv_sec2335734: , 2335736tv_nsec, : tv_nsec850775911:  }901579931, Duration:  }85, Duration: .83814002732.s763220696, End: sInstant, End:  { Instanttv_sec { : tv_sec2335820: , 2335820tv_nsec, : tv_nsec664778739:  }664800755
+ }
+File: /image_copy_353.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 918760099 }, Duration: 83.756835133s, End: Instant { tv_sec: 2335820, tv_nsec: 675595360 }
+File: /image_copy_137.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 907513731 }, Duration: 86.81258895s, End: Instant { tv_sec: 2335820, tv_nsec: 720102841 }
+File: /image_copy_335.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 504019423 }, Duration: 84.216327131s, End: Instant { tv_sec: 2335820, tv_nsec: 720346650 }
+File: /image_copy_513.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 303645705 }, Duration: 82.85551223s, End: Instant { tv_sec: 2335822, tv_nsec: 159158063 }
+File: /image_copy_511.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 289164621 }, Duration: 82.881468498s, End: Instant { tv_sec: 2335822, tv_nsec: 170633247 }
+File: /image_copy_435.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 954579112 }, Duration: 84.429357612s, End: Instant { tv_sec: 2335822, tv_nsec: 383936820 }
+File: /image_copy_388.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 355923269 }, Duration: 85.030711227s, End: Instant { tv_sec: 2335822, tv_nsec: 386634624 }
+File: /image_copy_403.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 560202458 }, Duration: 84.826673607s, End: Instant { tv_sec: 2335822, tv_nsec: 386876193 }
+File: /image_copy_451.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 118281012 }, Duration: 84.272517597s, End: Instant { tv_sec: 2335822, tv_nsecFile: : 390798737 }/image_copy_248.bmp
+, Start: Instant { tv_sec: 2335735, tv_nsec: 566891893 }, Duration: 86.82401366s, End: Instant { tv_sec: 2335822, tv_nsec: 390905649 }
+File: /image_copy_357.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 957778022 }, Duration: 85.433373772s, End: Instant { tv_sec: 2335822, tv_nsec: 391151890 }
+File: /image_copy_366.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 68962774 }, Duration: 85.322314429s, End: Instant { tv_sec: 2335822, tv_nsec: 391277331 }
+File: /image_copy_42.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 882954397 }, Duration: 84.515578612s, End: Instant { tv_sec: 2335822, tv_nsec: 398533105 }
+File: /image_copy_444.bmp, Start: Instant { tv_sec: File: 2335738, tv_nsec/image_copy_450.bmp: , Start: 36192701Instant } { , Duration: tv_sec84: .233573836655399File: , stv_nsec, End: : /image_copy_361.bmpInstant106833284, Start:  {  }Instanttv_sec, Duration:  { : 84tv_sec2335822.: , 2959634552335737tv_nsecs, : , End: tv_nsec402746787Instant:  } { 15550807
+tv_sec }: , Duration: 233582285, tv_nsec: 402796867 }
+File: /image_copy_199.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 15548471 }, Duration: 87.387487885s, End: Instant { tv_sec: 2335822, tv_nsec: 403036420 }
+.3872931s, End: Instant { tv_sec: 2335822, tv_nsec: 402844003 }
+File: /image_copy_135.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 890994974 }, Duration: 100.373162253s, End: Instant { tv_sec: 2335834, tv_nsec: 264157355 }
+File: /image_copy_108.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 667443032 }, Duration: 100.600919589s, End: Instant { tv_sec: 2335834, tv_nsec: 268362781 }
+File: /image_copy_130.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 845279679 }, Duration: 100.424941637s, End: Instant { tv_sec: 2335834, tv_nsec: 270221444 }
+File: /image_copy_123.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 760579037 }, Duration: 100.511520527s, End: Instant { tv_sec: 2335834, tv_nsec: 272099756 }
+File: File: /image_copy_105.bmp/image_copy_100.bmp, Start: , Start: InstantInstant {  { tv_sectv_sec: : 23357332335733, , tv_nsectv_nsec: : 649889935623105599 } }, Duration: , Duration: 100100..630215358657036558ss, End: , End: InstantInstant {  { tv_sectv_sec: : 23358342335834, , tv_nsectv_nsec: : 280105453280142285 } }
+
+File: /image_copy_475.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 807183568 }, Duration: 96.54156075s, End: Instant { tv_sec: 2335835, tv_nsec: 348744478 }
+File: /image_copy_492.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 34265413 }, Duration: 96.329670872s, End: Instant { tv_sec: 2335835, tv_nsec: 363936381 }
+File: /image_copy_164.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 516340626 }, Duration: 100.859679709s, End: Instant { tv_sec: 2335835, tv_nsec: 376020527 }
+File: /image_copy_197.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 996050565 }, Duration: 100.382902935s, End: Instant { tv_sec: 2335835, tv_nsec: 378953564 }
+File: /image_copy_181.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 784091024 }, Duration: 100.594986156s, End: Instant { tv_sec: 2335835, tv_nsec: 379077276 }
+File: /image_copy_190.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 925071741 }, Duration: 100.46524171s, End: Instant { tv_sec: 2335835, tv_nsec: 390313579 }
+File: /image_copy_1000.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 618851309 }, Duration: 103.9638617s, End: Instant { tv_sec: 2335837, tv_nsec: 582713137 }
+File: /image_copy_107.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 660764924 }, Duration: 103.924111101s, End: Instant { tv_sec: 2335837, tv_nsec: 584876153 }
+File: /image_copy_120.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 731669700 }, Duration: 103.85526083s, End: Instant { tv_sec: 2335837, tv_nsec: 586930690 }
+File: /image_copy_134.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 874581625 }, Duration: 103.882012777s, End: Instant { tv_sec: 2335837, tv_nsec: 756594498 }
+File: /image_copy_110.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 680675023 }, Duration: 104.07663855s, End: Instant { tv_sec: 2335837, tv_nsec: 757313669 }
+File: /image_copy_212.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 241127749 }, Duration: 106.412651295s, End: Instant { tv_sec: 2335841, tv_nsec: 653779140 }
+File: /image_copy_173.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 712089475 }, Duration: 106.972373984s, End: Instant { tv_sec: 2335841, tv_nsec: 684463523 }
+File: /image_copy_19.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 47455004 }, Duration: 107.072668917s, End: Instant { tv_sec: 2335842, tv_nsec: 120124017 }
+File: /image_copy_397.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 472595692 }, Duration: 105.692815091s, End: Instant { tv_sec: 2335843, tv_nsec: 165410911 }
+File: File: /image_copy_119.bmp/image_copy_117.bmp, Start: , Start: InstantInstant {  { tv_sectv_sec: : 23357332335733, , tv_nsectv_nsec: : 720889911712700501 } }, Duration: , Duration: 132132..503459869511705471ss, End: , End: InstantInstant {  { tv_sectv_sec: : 23358662335866, , tv_nsectv_nsec: : 224349876224406100 } }
+
+File: /image_copy_109.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 671857099 }, Duration: 132.588414813s, End: Instant { tv_sec: 2335866, tv_nsec: 260272040 }
+File: /image_copy_50.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 266781935 }, Duration: 147.641342139s, End: Instant { tv_sec: 2335886, tv_nsec: 908124266 }
+File: /image_copy_530.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 564361738 }, Duration: 147.417000239s, End: Instant { tv_sec: 2335886, tv_nsec: 981362137 }
+File: /image_copy_558.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 957739060 }, Duration: 147.02688773s, End: Instant { tv_sec: 2335886, tv_nsec: 984626918 }
+File: /image_copy_329.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 420160833 }, Duration: 150.597541262s, End: Instant { tv_sec: 2335887, tv_nsec: 17702191 }
+File: /image_copy_538.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 658113937 }, Duration: 147.360321249s, End: Instant { tv_sec: 2335887, tv_nsec: 18435314 }
+File: /image_copy_544.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 745334653 }, Duration: 147.299232353s, End: Instant { tv_sec: 2335887, tv_nsec: 44567102 }
+File: /image_copy_521.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 425346021 }, Duration: 147.628180766s, End: Instant { tv_sec: 2335887, tv_nsec: 53526947 }
+File: /image_copy_520.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 411701164 }, Duration: 147.652859045s, End: Instant { tv_sec: 2335887, tv_nsec: 64560273 }
+File: /image_copy_542.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 728720632 }, Duration: 147.336753629s, End: Instant { tv_sec: 2335887, tv_nsec: 65474389 }
+File: /image_copy_54.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 835140916 }, Duration: 147.23265137s, End: Instant { tv_sec: 2335887, tv_nsec: 67792382 }
+File: /image_copy_2.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 44074494 }, Duration: 151.035902643s, End: Instant { tv_sec: 2335887, tv_nsec: 79977233 }
+File: /image_copy_565.bmp, Start: Instant { tv_sec: 2335740, tv_nsec: 51960702 }, Duration: 147.050778929s, End: Instant { tv_sec: 2335887, tv_nsec: 102739727 }
+File: /image_copy_564.bmp, Start: Instant { tv_sec: 2335740, tv_nsec: 39167080 }, Duration: 147.065130317s, End: Instant { tv_sec: 2335887, tv_nsec: 104297493 }
+File: /image_copy_129.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 829964063 }, Duration: 153.284710369s, End: Instant { tv_sec: 2335887, tv_nsec: 114674592 }
+File: /image_copy_557.bmp, Start: InstantFile:  { tv_sec: /image_copy_545.bmp2335739, Start: , Instanttv_nsec { : tv_sec936566332:  }2335739, Duration: , 147tv_nsec.: 205787447754703141s }, End: , Duration: Instant147 { .tv_sec387697998: s2335887, End: , Instanttv_nsec { : tv_sec142353843:  }2335887
+, tv_nsec: 142401235 }
+File: /image_copy_463.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 284469770 }, Duration: 155.678924084s, End: Instant { tv_sec: 2335893, tv_nsec: 963393950 }
+File: /image_copy_240.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 512532242 }, Duration: 158.462492828s, End: Instant { tv_sec: 2335893, tv_nsec: 975025198 }
+File: File: /image_copy_412.bmp, Start: Instant/image_copy_171.bmp { , Start: tv_secInstant:  { 2335737tv_sec, : tv_nsec2335734: , 681594581tv_nsec }: , Duration: 687275964156 }., Duration: 297793259159s., End: 295842388Instants { , End: tv_secInstant:  { 2335893tv_sec, : tv_nsec2335893: , 979388000tv_nsec }: 
+983118512 }
+File: /image_copy_260.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 664169644 }, Duration: 158.326795364s, End: Instant { tv_sec: 2335893, tv_nsec: 990965136 }
+File: /image_copy_205.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 149054468 }, Duration: 158.855376996s, End: Instant { tv_sec: 2335894, tv_nsec: 4431944 }
+File: /image_copy_433.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 919941560 }, Duration: 156.088421664s, End: Instant { tv_sec: 2335894, tv_nsec: 8363352 }
+File: /image_copy_462.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 282063328 }, Duration: 155.729466469s, End: Instant { tv_sec: 2335894, tv_nsec: 11529925 }
+File: /image_copy_426.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 841741969 }, Duration: 156.17328173s, End: Instant { tv_sec: 2335894, tv_nsec: 15023827 }
+File: /image_copy_291.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 954976074 }, Duration: 158.065114782s, End: Instant { tv_sec: 2335894, tv_nsec: 20090952 }
+File: /image_copy_284.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 895127216 }, Duration: 158.131222066s, End: Instant { tv_sec: 2335894, tv_nsec: 26349346 }
+File: /image_copy_43.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 988866200 }, Duration: 156.041658876s, End: Instant { tv_sec: 2335894, tv_nsec: 30525172 }
+File: /image_copy_360.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 4693194 }, Duration: 157.031351776s, End: Instant { tv_sec: 2335894, tv_nsec: 36045066 }
+File: /image_copy_24.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 577040480 }, Duration: 158.463478461s, End: Instant { tv_sec: 2335894, tv_nsec: 40519037 }
+File: /image_copy_404.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 573665458 }, Duration: 156.471380894s, End: Instant { tv_sec: 2335894, tv_nsec: 45046480 }
+File: /image_copy_299.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 19439255 }, Duration: 158.028662277s, End: Instant { tv_sec: 2335894, tv_nsec: 48101628 }
+File: /image_copy_409.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 644194200 }, Duration: 156.409395099s, End: Instant { tv_sec: 2335894, tv_nsec: 53589395 }
+File: /image_copy_306.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 124366446 }, Duration: 157.935820352s, End: Instant { tv_sec: 2335894, tv_nsec: 60186958 }
+File: /image_copy_254.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 607832000 }, Duration: 158.453569107s, End: Instant { tv_sec: 2335894, tv_nsec: 61401235 }
+File: /image_copy_470.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 751054022 }, Duration: 155.311703315s, End: Instant { tv_sec: 2335894, tv_nsec: 62757433 }
+File: /image_copy_363.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 32464990 }, Duration: 157.034596749s, End: Instant { tv_sec: 2335894, tv_nsec: 67061835 }
+File: /image_copy_434.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 933728017 }, Duration: 156.138177838s, End: Instant { tv_sec: 2335894, tv_nsec: 71905951 }
+File: /image_copy_414.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 697169206 }, Duration: 156.378601849s, End: Instant { tv_sec: 2335894, tv_nsec: 75771183 }
+File: /image_copy_461.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 261568266 }, Duration: 155.819341402s, End: Instant { tv_sec: 2335894, tv_nsec: 80909796 }
+File: /image_copy_384.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 314735929 }, Duration: 156.769710969s, End: Instant { tv_sec: 2335894, tv_nsec: 84447026 }
+File: /image_copy_552.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 860643711 }, Duration: 154.230745136s, End: Instant { tv_sec: 2335894, tv_nsec: 91388911 }
+File: /image_copy_415.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 710128492 }, Duration: 156.398133321s, End: Instant { tv_sec: 2335894, tv_nsec: 108261845 }
+File: /image_copy_408.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 615302272 }, Duration: 156.500374356s, End: Instant { tv_sec: 2335894, tv_nsec: 115676820 }
+File: File: /image_copy_52.bmp, Start: Instant/image_copy_206.bmp { , Start: tv_secInstant:  { 2335739tv_sec, : tv_nsec2335735: , 538796415tv_nsec }: , Duration: 157649832154 }., Duration: 582269419158s., End: 964112741Instants { , End: tv_secInstant:  { 2335894tv_sec, : tv_nsec2335894: , 121065930tv_nsec }: 
+121762701 }
+File: /image_copy_298.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 18777749 }, Duration: 158.103341017s, End: Instant { tv_sec: 2335894, tv_nsec: 122118830 }
+File: /image_copy_456.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 188453881 }, Duration: 155.933734037s, End: Instant { tv_sec: 2335894, tv_nsec: 122188014 }
+File: /image_copy_420.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 771839949 }, Duration: 156.350402882s, End: Instant { tv_sec: 2335894, tv_nsec: 122242863 }
+File: /image_copy_387.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 343000847 }, Duration: 156.779257504s, End: Instant { tv_sec: 2335894, tv_nsec: 122258415 }
+File: /image_copy_249.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 571692905 }, Duration: 158.55062599s, End: Instant { tv_sec: 2335894, tv_nsec: 122318959 }
+File: /image_copy_523.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 445231768 }, Duration: 154.677153111s, End: Instant { tv_sec: 2335894, tv_nsec: 122384943 }
+File: /image_copy_371.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 144426993 }, Duration: 156.977978206s, End: Instant { tv_sec: 2335894, tv_nsec: 122405231 }
+File: /image_copy_282.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 880315634 }, Duration: 158.242508479s, End: Instant { tv_sec: 2335894, tv_nsec: 122824241 }
+File: /image_copy_273.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 788076081 }, Duration: 158.33521565s, End: Instant { tv_sec: 2335894, tv_nsec: 123291827 }
+File: /image_copy_174.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 717818939 }, Duration: 159.409505353s, End: Instant { tv_sec: 2335894, tv_nsec: 127324356 }
+File: /image_copy_1.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 52073327 }, Duration: 159.081670223s, End: Instant { tv_sec: 2335894, tv_nsec: 133743902 }
+File: /image_copy_177.bmp, Start: File: Instant { tv_sec: 2335734, /image_copy_3.bmptv_nsec, Start: : Instant743223429 {  }tv_sec, Duration: : 1592335737., 42655755tv_nsecs: , End: 520646228Instant } { , Duration: tv_sec156: .2335894651659466, stv_nsec, End: : Instant169781107 {  }tv_sec
+: File: 2335894, /image_copy_25.bmptv_nsec, Start: : Instant172305758 {  }tv_sec
+: 2335735, tv_nsec: 655643496 }, Duration: 158.516698198s, End: Instant { tv_sec: 2335894, tv_nsec: 172341822 }
+File: /image_copy_534.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 610914188 }, Duration: 154.561496274s, End: Instant { tv_sec: 2335894, tv_nsec: 172410590 }
+File: /image_copy_407.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 604217201 }, Duration: 156.568228653s, End: Instant { tv_sec: 2335894, tv_nsec: 172445918 }
+File: /image_copy_203.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 134066438 }, Duration: 159.039750334s, End: Instant { tv_sec: 2335894, tv_nsec: 173816900 }
+File: /image_copy_364.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 47127675 }, Duration: 157.128258255s, End: Instant { tv_sec: 2335894, tv_nsec: 175386026 }
+File: /image_copy_219.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 293231903 }, Duration: 158.882510925s, End: Instant { tv_sec: 2335894, tv_nsec: 175742924 }
+File: /image_copy_221.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 336043889 }, Duration: 158.839761787s, End: Instant { tv_sec: 2335894, tv_nsec: 175805804 }
+File: /image_copy_200.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 62760156 }, Duration: 159.118381894s, End: Instant { tv_sec: 2335894, tv_nsec: 181142146 }
+File: /image_copy_257.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 631155842 }, Duration: 158.553484079s, End: Instant { tv_sec: 2335894, tv_nsec: 184640017 }
+File: /image_copy_382.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 271880678 }, Duration: 156.916333337s, End: Instant { tv_sec: 2335894, tv_nsec: 188214111 }
+File: /image_copy_406.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 588857841 }, Duration: 156.602818173s, End: Instant { tv_sec: 2335894, tv_nsec: 191676142 }
+File: /image_copy_294.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 979470577 }, Duration: 158.216856112s, End: Instant { tv_sec: 2335894, tv_nsec: 196326817 }
+File: /image_copy_36.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 113670961 }, Duration: 157.088537256s, End: Instant { tv_sec: 2335894, tv_nsec: 202208345 }
+File: /image_copy_516.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 359319634 }, Duration: 154.849580643s, End: Instant { tv_sec: 2335894, tv_nsec: 208900373 }
+File: /image_copy_396.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 454943394 }, Duration: 156.76330441s, End: Instant { tv_sec: 2335894, tv_nsec: 218247868 }
+File: /image_copy_201.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 95680357 }, Duration: 159.123015448s, End: Instant { tv_sec: 2335894, tv_nsec: 218695901 }
+File: /image_copy_438.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 977107910 }, Duration: 156.243215422s, End: Instant { tv_sec: 2335894, tv_nsec: 220323428 }
+File: /image_copy_209.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 204081290 }, Duration: 159.017843393s, End: Instant { tv_sec: 2335894, tv_nsec: 221924811 }
+File: /image_copy_515.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 338840444 }, Duration: 154.884625749s, End: Instant { tv_sec: 2335894, tv_nsec: 223466257 }
+File: /image_copy_507.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 246256826 }, Duration: 154.982873487s, End: Instant { tv_sec: 2335894, tv_nsec: 229130441 }
+File: /image_copy_172.bmp, Start: File: Instant { File: /image_copy_429.bmptv_sec, Start: : /image_copy_176.bmpInstant2335734, Start:  { , Instanttv_sectv_nsec { : : tv_sec2335737695554526: ,  }2335734tv_nsec, Duration: , : 159tv_nsec863121227.:  }539945797736285480, Duration: s }156, End: , Duration: .Instant159378896243 { .stv_sec506962363, End: : sInstant2335894, End:  { , Instanttv_sectv_nsec { : : tv_sec2335894235500419: ,  }2335894tv_nsec
+, : tv_nsec242017598:  }243247971
+ }
+File: /image_copy_245.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 551873783 }, Duration: 158.691841198s, End: Instant { tv_sec: 2335894, tv_nsec: 243715077 }
+File: /image_copy_418.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 735338677 }, Duration: 156.516984083s, End: Instant { tv_sec: 2335894, tv_nsec: 252322824 }
+File: /image_copy_278.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 839686569 }, Duration: 158.418949882s, End: Instant { tv_sec: 2335894, tv_nsec: 258636579 }
+File: /image_copy_417.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 724746953 }, Duration: 156.536716645s, End: Instant { tv_sec: 2335894, tv_nsec: 261463694 }
+File: /image_copy_193.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 950862473 }, Duration: 159.316229916s, End: Instant { tv_sec: 2335894, tv_nsec: 267092485 }
+File: /image_copy_184.bmp, Start: Instant { tv_sec: 2335734, File: tv_nsec: 831998072 }, Duration: /image_copy_222.bmp159, Start: .Instant438614812 { stv_sec, End: : Instant2335735 { , tv_sectv_nsec: : 2335894348057476,  }tv_nsec, Duration: : 158270613012. }940172537
+s, End: Instant { tv_sec: 2335894, tv_nsec: 288230141 }
+File: /image_copy_531.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 570807045 }, Duration: 157.065008896s, End: Instant { tv_sec: 2335896, tv_nsec: 635816037 }
+File: /image_copy_372.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 161795770 }, Duration: 159.479603106s, End: Instant { tv_sec: 2335896, tv_nsec: 641399004 }
+File: /image_copy_231.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 422643995 }, Duration: 161.226196544s, End: Instant { tv_sec: 2335896, tv_nsec: 648840667 }
+File: /image_copy_53.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 688879378 }, Duration: 156.960575211s, End: Instant { tv_sec: 2335896, tv_nsec: 649454717 }
+File: /image_copy_228.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 392555133 }, Duration: 161.25722717s, End: Instant { tv_sec: 2335896, tv_nsec: 649782463 }
+File: /image_copy_103.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 639535332 }, Duration: 163.010593756s, End: Instant { tv_sec: 2335896, tv_nsec: 650129216 }
+File: /image_copy_549.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 823101634 }, Duration: 156.827388672s, End: Instant { tv_sec: 2335896, tv_nsec: 650490402 }
+File: /image_copy_51.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 400945440 }, Duration: 157.249855395s, End: Instant { tv_sec: 2335896, tv_nsec: 650800899 }
+File: /image_copy_529.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 525839209 }, Duration: 157.370966131s, End: Instant { tv_sec: 2335896, tv_nsec: 896805468 }
+File: /image_copy_175.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 724756632 }, Duration: 180.790952987s, End: Instant { tv_sec: 2335915, tv_nsec: 515709715 }
+File: /image_copy_258.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: File: 636420728File:  }/image_copy_543.bmp, Duration: /image_copy_556.bmp, Start: 179, Start: Instant.Instant { 950693538 { tv_secstv_sec: , End: : 2335739Instant2335739,  { , tv_nsectv_sectv_nsec: : : 7361288872335915931091493 },  }, Duration: tv_nsec, Duration: 175: 175.587114394.851065443 }656135637s
+s, End: , End: InstantInstant {  { tv_sectv_sec: : 23359152335915, , tv_nsectv_nsec: : 587194458587227226 } }
+
+File: /image_copy_527.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 505920502 }, Duration: 176.480992375s, End: Instant { tv_sec: 2335915, tv_nsec: 986912941 }
+File: /image_copy_225.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 370407329 }, Duration: 180.930870046s, End: Instant { tv_sec: 2335916, tv_nsec: 301277535 }
+File: /image_copy_261.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 673608019 }, Duration: 181.769702583s, End: Instant { tv_sec: 2335917, tv_nsec: 443310794 }
+File: /image_copy_223.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 348208228 }, Duration: 182.109874051s, End: Instant { tv_sec: 2335917, tv_nsec: 458082375 }
+File: /image_copy_144.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 977774792 }, Duration: 183.506056201s, End: Instant { tv_sec: 2335917, tv_nsec: 483831153 }
+File: /image_copy_567.bmp, Start: Instant { tv_sec: 2335740, tv_nsec: 76813829 }, Duration: 177.430957487s, End: Instant { tv_sec: 2335917, tv_nsec: 507771476 }
+File: /image_copy_563.bmp, Start: Instant { tv_sec: 2335740, tv_nsec: 28353403 }, Duration: 177.48737209s, End: Instant { tv_sec: 2335917, tv_nsec: 515725621 }
+File: /image_copy_410.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 652441179 }, Duration: 179.870515704s, End: Instant { tv_sec: 2335917, tv_nsec: 522956979 }
+File: /image_copy_419.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 745652032 }, Duration: 179.78103549s, End: Instant { tv_sec: 2335917, tv_nsec: 526687938 }
+File: /image_copy_277.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 835381143 }, Duration: 181.707697519s, End: Instant { tv_sec: 2335917, tv_nsec: 543078790 }
+File: /image_copy_207.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 181844813 }, Duration: 182.368700632s, End: Instant { tv_sec: 2335917, tv_nsec: 550545509 }
+File: /image_copy_379.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 239790944 }, Duration: 180.318773254s, End: Instant { tv_sec: 2335917, tv_nsec: 558564326 }
+File: /image_copy_102.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 634723503 }, Duration: 183.928809771s, End: Instant { tv_sec: 2335917, tv_nsec: 563533434 }
+File: /image_copy_210.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 225093026 }, Duration: 182.357233894s, End: Instant { tv_sec: 2335917, tv_nsec: 582327048 }
+File: /image_copy_274.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 795000814 }, Duration: 181.789923493s, End: Instant { tv_sec: 2335917, tv_nsec: 584924435 }
+File: /image_copy_553.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 893370216 }, Duration: 177.702557528s, End: Instant { tv_sec: 2335917, tv_nsec: 595927840 }
+File: /image_copy_539.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 670190020 }, Duration: 177.926934113s, End: Instant { tv_sec: 2335917, tv_nsec: 597124229 }
+File: /image_copy_518.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 381800592 }, Duration: 178.215670582s, End: Instant { tv_sec: 2335917, tv_nsec: 597471270 }
+File: /image_copy_367.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 84044117 }, Duration: 180.513838387s, End: Instant { tv_sec: 2335917, tv_nsec: 597882632 }
+File: /image_copy_211.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 232923843 }, Duration: 182.369079926s, End: Instant { tv_sec: 2335917, tv_nsec: 602003865 }
+File: /image_copy_559.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 974165145 }, Duration: 177.632183314s, End: Instant { tv_sec: 2335917, tv_nsec: 606348555 }
+File: /image_copy_368.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 95645574 }, Duration: 180.514128307s, End: Instant { tv_sec: 2335917, tv_nsec: 609774009 }
+File: /image_copy_375.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 197473519 }, Duration: 180.415871097s, End: Instant { tv_sec: 2335917, tv_nsec: 613344712 }
+File: /image_copy_437.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 973739192 }, Duration: 179.645573225s, End: Instant { tv_sec: 2335917, tv_nsec: 619312513 }
+File: /image_copy_561.bmp, Start: Instant { tv_sec: 2335740, tv_nsec: 7338179 }, Duration: 177.615902958s, End: Instant { tv_sec: 2335917, tv_nsec: 623241201 }
+File: /image_copy_532.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 584508798 }, Duration: 178.04426113s, End: Instant { tv_sec: 2335917, tv_nsec: 628770056 }
+File: /image_copy_547.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 772867504 }, Duration: 177.861813744s, End: Instant { tv_sec: 2335917, tv_nsec: 634681344 }
+File: /image_copy_555.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 919899254 }, Duration: 177.7200032s, End: Instant { tv_sec: 2335917, tv_nsec: 639902550 }
+File: /image_copy_188.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 865091138 }, Duration: 182.779329734s, End: Instant { tv_sec: 2335917, tv_nsec: 644420936 }
+File: /image_copy_224.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 358616208 }, Duration: 182.293259415s, End: Instant { tv_sec: 2335917, tv_nsec: 651875879 }
+File: /image_copy_416.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 715499106 }, Duration: 179.941886716s, End: Instant { tv_sec: 2335917, tv_nsec: 657385950 }
+File: /image_copy_560.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 998426654 }, Duration: 177.659344801s, End: Instant { tv_sec: 2335917, tv_nsec: 657771551 }
+File: /image_copy_393.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 412990707 }, Duration: 180.248348603s, End: Instant { tv_sec: 2335917, tv_nsec: 661339406 }
+File: /image_copy_27.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 849244625 }, Duration: 181.842955132s, End: Instant { tv_sec: 2335917, tv_nsec: 692199853 }
+File: /image_copy_286.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 914325248 }, Duration: 181.789362525s, End: Instant { tv_sec: 2335917, tv_nsec: 703687869 }
+File: /image_copy_213.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 248271299 }, Duration: 182.459356266s, End: Instant { tv_sec: 2335917, tv_nsec: 707627693 }
+File: /image_copy_133.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 866858649 }, Duration: 183.844237059s, End: Instant { tv_sec: 2335917, tv_nsec: 711095836 }
+File: /image_copy_216.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 274500912 }, Duration: 182.437601168s, End: Instant { tv_sec: 2335917, tv_nsec: 712102240 }
+File: /image_copy_477.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 821671117 }, Duration: 178.896508876s, End: Instant { tv_sec: 2335917, tv_nsec: 718180057 }
+File: /image_copy_131.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 850099859 }, Duration: 183.873300187s, End: Instant { tv_sec: 2335917, tv_nsec: 723400110 }
+File: /image_copy_380.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 260788087 }, Duration: 180.467541388s, End: Instant { tv_sec: 2335917, tv_nsec: 728329571 }
+File: /image_copy_55.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 987112719 }, Duration: 177.744765122s, End: Instant { tv_sec: 2335917, tv_nsec: 731877937 }
+File: /image_copy_385.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 320493905 }, Duration: 180.427982437s, End: Instant { tv_sec: 2335917, tv_nsec: 748476758 }
+File: /image_copy_535.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 623206528 }, Duration: 178.128970981s, End: Instant { tv_sec: 2335917, tv_nsec: 752177573 }
+File: /image_copy_295.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 986618350 }, Duration: 181.769539912s, End: Instant { tv_sec: 2335917, tv_nsec: 756158390 }
+File: /image_copy_391.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 396299117 }, Duration: 180.366927238s, End: Instant { tv_sec: 2335917, tv_nsec: 763226419 }
+File: /image_copy_217.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 279522309 }, Duration: 182.501909497s, End: Instant { tv_sec: 2335917, tv_nsec: 781431934 }
+File: /image_copy_562.bmp, Start: Instant { tv_sec: 2335740, tv_nsec: 19940856 }, Duration: 177.764982132s, End: Instant { tv_sec: 2335917, tv_nsec: 784923180 }
+File: /image_copy_226.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 378879396 }, Duration: 182.409618007s, End: Instant { tv_sec: 2335917, tv_nsec: 788497531 }
+File: /image_copy_276.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 827654102 }, Duration: 181.964299251s, End: Instant { tv_sec: 2335917, tv_nsec: 791953417 }
+File: /image_copy_509.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 255635585 }, Duration: 178.544171113s, End: Instant { tv_sec: 2335917, tv_nsec: 799806826 }
+File: /image_copy_266.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 715552290 }, Duration: 182.090602946s, End: Instant { tv_sec: 2335917, tv_nsec: 806155364 }
+File: /image_copy_525.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 484328828 }, Duration: 178.32562172s, End: Instant { tv_sec: 2335917, tv_nsec: 809950644 }
+File: /image_copy_464.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 297479520 }, Duration: 179.516115683s, End: Instant { tv_sec: 2335917, tv_nsec: 813595299 }
+File: /image_copy_289.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 936219484 }, Duration: 181.883485536s, End: Instant { tv_sec: 2335917, tv_nsec: 819705084 }
+File: /image_copy_244.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 548090439 }, Duration: 182.276597002s, End: Instant { tv_sec: 2335917, tv_nsec: 824687761 }
+File: /image_copy_21.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 320566257 }, Duration: 182.674671328s, End: Instant { tv_sec: 2335917, tv_nsec: 995237681 }
+File: /image_copy_125.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 773420243 }, Duration: 184.226273008s, End: Instant { tv_sec: 2335917, tv_nsec: 999693347 }
+File: /image_copy_517.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 372473833 }, Duration: 178.666394908s, End: Instant { tv_sec: 2335918, tv_nsec: 38868837 }
+File: /image_copy_234.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 444705655 }, Duration: 182.650976952s, End: Instant { tv_sec: 2335918, tv_nsec: 95682735 }
+File: /image_copy_287.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 922007105 }, Duration: 182.821958787s, End: Instant { tv_sec: 2335918, tv_nsec: 743966020 }
+File: /image_copy_514.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 322774713 }, Duration: 179.431285716s, End: Instant { tv_sec: 2335918, tv_nsec: 754060525 }
+File: /image_copy_400.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 536982393 }, Duration: 181.223108269s, End: Instant { tv_sec: 2335918, tv_nsec: 760090790 }
+File: /image_copy_411.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 670099557 }, Duration: 181.091339047s, End: Instant { tv_sec: 2335918, tv_nsec: 761438700 }
+File: /image_copy_272.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 782150424 }, Duration: 182.990662147s, End: Instant { tv_sec: 2335918, tv_nsec: 772812699 }
+File: /image_copy_140.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 940238508 }, Duration: 184.881985051s, End: Instant { tv_sec: 2335918, tv_nsec: 822223687 }
+File: /image_copy_554.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 917760589 }, Duration: 178.986213611s, End: Instant { tv_sec: 2335918, tv_nsec: 903974328 }
+File: /image_copy_533.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 613875801 }, Duration: 179.301040269s, End: Instant { tv_sec: 2335918, tv_nsec: 914916166 }
+File: /image_copy_262.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 692364449 }, Duration: 183.223395464s, End: Instant { tv_sec: 2335918, tv_nsec: 915760009 }
+File: /image_copy_358.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 970623836 }, Duration: 181.949095453s, End: Instant { tv_sec: 2335918, tv_nsec: 919719417 }
+File: /image_copy_303.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 97732926 }, Duration: 182.826089708s, End: Instant { tv_sec: 2335918, tv_nsec: 923822762 }
+File: /image_copy_288.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 927512696 }, Duration: 182.997076822s, End: Instant { tv_sec: 2335918, tv_nsec: 924589614 }
+File: /image_copy_166.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 596868514 }, Duration: 184.331453787s, End: Instant { tv_sec: 2335918, tv_nsec: 928322397 }
+File: /image_copy_232.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 430302555 }, Duration: 183.500196363s, End: Instant { tv_sec: 2335918, tv_nsec: 930499014 }
+File: /image_copy_472.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 780792258 }, Duration: 180.157000514s, End: Instant { tv_sec: 2335918, tv_nsec: 937792836 }
+File: /image_copy_267.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 730473441 }, Duration: 183.212157559s, End: Instant { tv_sec: 2335918, tv_nsec: 942631128 }
+File: /image_copy_264.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 699673280 }, Duration: 183.490241749s, End: Instant { tv_sec: 2335919, tv_nsec: 189915157 }
+File: /image_copy_293.bmpFile: , Start: Instant/image_copy_386.bmp { , Start: tv_secInstant:  { 2335735tv_sec, : tv_nsec2335737: , tv_nsec: 336596884 }, Duration: 181.859210905s, End: Instant { tv_sec: 2335919, tv_nsec: 195807949 }
+969252166 }, Duration: 183.226505031s, End: Instant { tv_sec: 2335919, tv_nsec: 195757325 }
+File: /image_copy_308.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 152918661 }, Duration: 183.050058118s, End: Instant { tv_sec: 2335919, tv_nsec: 202976907 }
+File: /image_copy_301.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 66310171 }, Duration: 183.14054528s, End: Instant { tv_sec: 2335919, tv_nsec: 206855547 }
+File: /image_copy_465.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 313232066 }, Duration: 180.90465543s, End: Instant { tv_sec: 2335919, tv_nsec: 217887592 }
+File: /image_copy_330.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 450043838 }, Duration: 182.771738298s, End: Instant { tv_sec: 2335919, tv_nsec: 221782264 }
+File: /image_copy_328.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 398710695 }, Duration: 182.854354003s, End: Instant { tv_sec: 2335919, tv_nsec: 253064858 }
+File: /image_copy_32.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 436480229 }, Duration: 182.816779669s, End: Instant { tv_sec: 2335919, tv_nsec: 253259994 }
+File: /image_copy_237.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 465666447 }, Duration: 183.787800204s, End: Instant { tv_sec: 2335919, tv_nsec: 253466811 }
+File: /image_copy_346.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 808116949 }, Duration: 183.496708826s, End: Instant { tv_sec: 2335920, tv_nsec: 304825903 }
+File: /image_copy_551.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 847980906 }, Duration: 180.471250017s, End: Instant { tv_sec: 2335920, tv_nsec: 319231019 }
+File: /image_copy_377.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 219017705 }, Duration: 183.685432114s, End: Instant { tv_sec: 2335920, tv_nsec: 904449979 }
+File: /image_copy_389.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 363148483 }, Duration: 183.541552153s, End: Instant { tv_sec: 2335920, tv_nsec: 904700764 }
+File: File: /image_copy_17.bmp, Start: /image_copy_35.bmpInstant, Start:  { Instanttv_sec { : tv_sec2335734: , 2335736tv_nsec, : tv_nsec770190966:  }991061553, Duration:  }186, Duration: .183136948272.s916086709, End: sInstant, End:  { Instanttv_sec { : tv_sec2335920: , 2335920tv_nsec, : tv_nsec907139366:  }907148390
+ }
+File: /image_copy_439.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 981287960 }, Duration: 182.940224201s, End: Instant { tv_sec: 2335920, tv_nsec: 921512225 }
+File: /image_copy_285.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 909651373 }, Duration: 185.016127206s, End: Instant { tv_sec: 2335920, tv_nsec: 925778675 }
+File: /image_copy_178.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 752201515 }, Duration: 186.181398024s, End: Instant { tv_sec: 2335920, tv_nsec: 933599635 }
+File: /image_copy_271.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 772246607 }, Duration: 185.165250388s, End: Instant { tv_sec: 2335920, tv_nsec: 937497091 }
+File: /image_copy_474.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 802898943 }, Duration: 182.13508071s, End: Instant { tv_sec: 2335920, tv_nsec: 937979749 }
+File: /image_copy_255.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 618570925 }, Duration: 185.319547257s, End: Instant { tv_sec: 2335920, tv_nsec: 938118310 }
+File: /image_copy_16.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 663506168 }, Duration: 186.278175996s, End: Instant { File: tv_sec: 2335920, /image_copy_269.bmptv_nsec, Start: : Instant941682260 {  }tv_sec
+: 2335735, tv_nsec: 745659776 }, Duration: 185.196085845s, End: Instant { tv_sec: 2335920, tv_nsec: 941745717 }
+File: /image_copy_279.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 844113627 }, Duration: 185.097823707s, End: Instant { tv_sec: 2335920, tv_nsec: 941937494 }
+File: /image_copy_161.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 483794826 }, Duration: 186.458486285s, End: Instant { tv_sec: 2335920, tv_nsec: 942281335 }
+File: /image_copy_162.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 486406709 }, Duration: 186.459435057s, End: Instant { tv_sec: 2335920, tv_nsec: 945842054 }
+File: /image_copy_243.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 533758859 }, Duration: 185.415938251s, End: Instant { tv_sec: 2335920, tv_nsec: 949697270 }
+File: /image_copy_165.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 576681358 }, Duration: 186.387402659s, End: Instant { tv_sec: 2335920, tv_nsec: 964084177 }
+File: /image_copy_455.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 175012769 }, Duration: 182.799998365s, End: Instant { tv_sec: 2335920, tv_nsec: 975011262 }
+File: /image_copy_302.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 74057468 }, Duration: 184.905392148s, End: Instant { tv_sec: 2335920, tv_nsec: 979449712 }
+File: /image_copy_238.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 488222573 }, Duration: 185.494645233s, End: Instant { tv_sec: 2335920, tv_nsec: 982867934 }
+File: /image_copy_374.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 182423664 }, Duration: 183.804514559s, End: Instant { tv_sec: 2335920, tv_nsec: 986938319 }
+File: /image_copy_26.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 754101347 }, Duration: 185.23627385s, End: Instant { tv_sec: 2335920, tv_nsec: 990375293 }
+File: /image_copy_263.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 694021032 }, Duration: 185.299794468s, End: Instant { tv_sec: 2335920, tv_nsec: 993815692 }
+File: /image_copy_413.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 688744818 }, Duration: 183.310603889s, End: Instant { tv_sec: 2335920, tv_nsec: 999348803 }
+File: /image_copy_18.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 914276080 }, Duration: 186.088825826s, End: Instant { tv_sec: 2335921, tv_nsec: 3102034 }
+File: /image_copy_246.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 556803115 }, Duration: 185.450109687s, End: Instant { tv_sec: 2335921, tv_nsec: 6912898 }
+File: /image_copy_239.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 494706344 }, Duration: 185.515862377s, End: Instant { tv_sec: 2335921, tv_nsec: 10568849 }
+File: /image_copy_259.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 649471342 }, Duration: 185.364882098s, End: Instant { tv_sec: 2335921, tv_nsec: 14353536 }
+File: /image_copy_297.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 5143804 }, Duration: 185.012612691s, End: Instant { tv_sec: 2335921, tv_nsec: 17756591 }
+File: File: /image_copy_275.bmp, Start: /image_copy_283.bmpInstant, Start:  { Instanttv_sec { : tv_sec2335735: , 2335735tv_nsec, : tv_nsec802774543:  }888536309, Duration:  }185, Duration: .185218803855.s133046025, End: sInstant, End:  { Instanttv_sec { : tv_sec2335921: , 2335921tv_nsec, : tv_nsec21578494:  }21582430
+ }
+File: /image_copy_440.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 996051382 }, Duration: 183.029467001s, End: Instant { tv_sec: 2335921, tv_nsec: 25518479 }
+File: /image_copy_512.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 298050226 }, Duration: 181.730921355s, End: Instant { tv_sec: 2335921, tv_nsec: 28971677 }
+File: /image_copy_365.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 59934769 }, Duration: 183.972540186s, End: Instant { tv_sec: 2335921, tv_nsec: 32475051 }
+File: /image_copy_524.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 464655818 }, Duration: 181.571246735s, End: Instant { tv_sec: 2335921, tv_nsec: 35902649 }
+File: /image_copy_253.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 601087940 }, Duration: 185.438189027s, End: Instant { tv_sec: 2335921, tv_nsec: 39277063 }
+File: /image_copy_405.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 584910529 }, Duration: 183.458465783s, End: Instant { tv_sec: 2335921, tv_nsec: 43376376 }
+File: /image_copy_423.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 806494270 }, Duration: 183.240515785s, End: Instant { tv_sec: 2335921, tv_nsec: 47010151 }
+File: /image_copy_325.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 356953913 }, Duration: 184.693650493s, End: Instant { tv_sec: 2335921, tv_nsec: 50604502 }
+File: /image_copy_227.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 386098498 }, Duration: 185.668010403s, End: Instant { tv_sec: 2335921, tv_nsec: 54108965 }
+File: /image_copy_378.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 221908213 }, Duration: 183.835942783s, End: Instant { tv_sec: 2335921, tv_nsec: 57851092 }
+File: /image_copy_242.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 527513009 }, Duration: 185.533837649s, End: Instant { tv_sec: 2335921, tv_nsec: 61350754 }
+File: /image_copy_241.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 522832285 }, Duration: 185.53870103s, End: Instant { tv_sec: 2335921, tv_nsec: 61533443 }
+File: /image_copy_41.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 762371526 }, Duration: 183.302545099s, End: Instant { tv_sec: 2335921, tv_nsec: 64916721 }
+File: /image_copy_292.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 963959376 }, Duration: 185.104425648s, End: Instant { tv_sec: 2335921, tv_nsec: 68385120 }
+File: /image_copy_230.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 415924511 }, Duration: 185.656627346s, End: Instant { tv_sec: 2335921, tv_nsec: 72551985 }
+File: /image_copy_38.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 373352461 }, Duration: 183.702531857s, End: Instant { tv_sec: 2335921, tv_nsec: 75884414 }
+File: /image_copy_281.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 866623961 }, Duration: 185.212594131s, End: Instant { tv_sec: 2335921, tv_nsec: 79218124 }
+File: /image_copy_265.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 709465513 }, Duration: 185.373792212s, End: Instant { tv_sec: 2335921, tv_nsec: 83257821 }
+File: /image_copy_333.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 478831990 }, Duration: 184.611017474s, End: Instant { tv_sec: 2335921, tv_nsec: 89849560 }
+File: /image_copy_381.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 267366547 }, Duration: 183.825903027s, End: Instant { tv_sec: 2335921, tv_nsec: 93269670 }
+File: /image_copy_235.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 451333075 }, Duration: 185.647095433s, End: Instant { tv_sec: 2335921, tv_nsec: 98428572 }
+File: /image_copy_436.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 963161068 }, Duration: 184.232056415s, End: Instant { tv_sec: 2335922, tv_nsec: 195217579 }
+File: /image_copy_23.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 504858258 }, Duration: 186.713403224s, End: Instant { tv_sec: 2335922, tv_nsec: 218261578 }
+File: /image_copy_402.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 548656137 }, Duration: 184.670348548s, End: Instant { tv_sec: 2335922, tv_nsec: 219004845 }
+File: /image_copy_138.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 917085259 }, Duration: 188.311470249s, End: Instant { tv_sec: 2335922, tv_nsec: 228555605 }
+File: /image_copy_392.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 410232039 }, Duration: 184.842248624s, End: Instant { tv_sec: 2335922, tv_nsec: 252480759 }
+File: /image_copy_192.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 960066767 }, Duration: 187.37173416s, End: Instant { tv_sec: 2335922, tv_nsec: 331801055 }
+File: /image_copy_394.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 430141627 }, Duration: 184.921198708s, End: Instant { tv_sec: 2335922, tv_nsec: 351340463 }
+File: /image_copy_204.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 140918466 }, Duration: 189.799594476s, End: Instant { tv_sec: 2335924, tv_nsec: 940513038 }
+File: /image_copy_445.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 44368319 }, Duration: 186.8993943s, End: Instant { tv_sec: 2335924, tv_nsec: 943762715 }
+File: /image_copy_548.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 788830835 }, Duration: 185.155273802s, End: Instant { tv_sec: 2335924, tv_nsec: 944104765 }
+File: /image_copy_448.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 76930855 }, Duration: 186.867370647s, End: Instant { tv_sec: 2335924, tv_nsec: 944301630 }
+File: /image_copy_121.bmp, Start: Instant { tv_sec: 2335733File: , tv_nsec: File: /image_copy_296.bmp745021532, Start:  }Instant, Duration:  { 191tv_sec./image_copy_148.bmp: 204923289, Start: 2335736sInstant, , End:  { tv_nsecInstanttv_sec:  { : 8083432tv_sec2335734 }: , , Duration: 2335924tv_nsec188, : .tv_nsec196257721947315107:  }s949944981, Duration: , End:  }190Instant
+. { 76095305tv_secs: , End: 2335924InstantFile: ,  { tv_nsectv_sec: : /image_copy_12.bmp9553986352335924, Start:  }, Instant
+tv_nsec { : tv_sec957210899:  }2335733
+, tv_nsec: 836204473 }, Duration: 191.128564121s, End: Instant { tv_sec: 2335924, tv_nsec: 964768722 }
+File: File: /image_copy_13.bmp, Start: Instant { tv_sec: /image_copy_236.bmp2335733, Start: , Instanttv_nsec { : tv_sec931947497:  }2335735, Duration: , 191tv_nsec.: 034830801460929371s }, End: , Duration: Instant189 { .tv_sec509565903: File: 2335924, /image_copy_398.bmptv_nsec, Start: : Instant966778394 {  }tv_sec
+: 2335737, tv_nsec: 482324468 }, Duration: 187.495232147s, End: Instant { tv_sec: 2335924, tv_nsec: 977556711 }
+File: /image_copy_268.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 738279041 }File: , Duration: 189./image_copy_342.bmp248090986, Start: sInstant, End:  { Instanttv_sec { : tv_sec2335736: , 2335924tv_nsec, : tv_nsec765780100:  }986370123, Duration:  }197
+.011775929File: s, End: /image_copy_300.bmpInstant, Start:  { Instanttv_sec { : tv_sec2335933: , 2335736tv_nsec, : tv_nsec777556125:  }60086209
+ }, Duration: 188.929691s, End: Instant { tv_sec: 2335924, tv_nsec: 989777337 }
+File: /image_copy_29.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 33567378 }, Duration: 188.959515893s, End: Instant { tv_sec: 2335924, tv_nsec: 993083399 }
+File: /image_copy_251.bmp, Start: InstantFile:  { tv_sec: 2335735/image_copy_318.bmp, , Start: tv_nsecInstant:  { 590430520tv_sec }: , Duration: 2335736189, .tv_nsec407732036: s272500728, End:  }Instant, Duration:  { 189tv_sec.: 4175785712335924s, , End: tv_nsecInstant:  { 998162684tv_sec }: 
+2335925, tv_nsec: 690079427 }
+File: /image_copy_317.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 265308442 }, Duration: 189.461144927s, End: Instant { tv_sec: 2335925, tv_nsec: 726453497 }
+File: /image_copy_47.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 870550105 }, Duration: 186.860183698s, End: Instant { tv_sec: 2335925, tv_nsec: 730733899 }
+File: /image_copy_20.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 217186337 }, Duration: 190.515708947s, End: Instant { tv_sec: 2335925, tv_nsec: 732895444 }
+File: File: /image_copy_489.bmp, Start: Instant { /image_copy_321.bmptv_sec, Start: : Instant2335738 { , tv_sectv_nsec: : 2335736990593518,  }tv_nsec, Duration: : 186317664533. }744371247, Duration: s189, End: .Instant442702128 { stv_sec, End: : Instant2335925 { , tv_sectv_nsec: : 2335925734964861,  }tv_nsec
+: 760366757 }
+File: /image_copy_355.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 937537521 }, Duration: 188.825341471s, End: Instant { tv_sec: 2335925, tv_nsec: 762879152 }
+File: /image_copy_339.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 720997449 }, Duration: 189.047018012s, End: Instant { tv_sec: 2335925, tv_nsec: 768015589 }
+File: File: /image_copy_34.bmp, Start: File: Instant/image_copy_101.bmp { , Start: tv_secInstant: /image_copy_143.bmp { 2335736, Start: tv_sec, Instant: tv_nsec { 2335733: tv_sec, 859770509: tv_nsec }2335733: , Duration: , 630209213188tv_nsec }.: , Duration: 914876371963918446192s }., End: , Duration: 146870829Instant191s { ., End: tv_sec814812931Instant: s { 2335925, End: tv_sec, Instant: tv_nsec { 2335925: tv_sec, 774647008: tv_nsec }2335925: 
+, 777080106tv_nsec }: 
+778731505 }
+File: /image_copy_484.bmp, Start: File: Instant { tv_sec: /image_copy_229.bmp2335738, Start: , Instanttv_nsec { : tv_sec930272626:  }2335735, Duration: , 186tv_nsec.: 849372931400789952s }, End: , Duration: Instant190 { .tv_sec378894741: s2335925, End: , Instanttv_nsec { : tv_sec779645685:  }2335925
+, tv_nsecFile: /image_copy_337.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 711235648 }, Duration: 189.068503573s, End: Instant { tv_sec: 2335925, tv_nsec: 779739349 }
+File: /image_copy_528.bmpFile: , Start: Instant/image_copy_247.bmp { , Start: tv_secInstant:  { 2335739tv_sec, : tv_nsec2335735: , 512381265tv_nsec }: , Duration: 561697024186 }, Duration: .190271298389.s224701745, End: sInstant, End:  { Instanttv_sec { : tv_sec2335925: , 2335925tv_nsec, : tv_nsec783679750:  }786398833
+ }
+File: /image_copy_312.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 221977605 }, Duration: 189.567237463s, End: Instant { tv_sec: 2335925, tv_nsec: 789215164 }
+File: /image_copy_345.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 799621522 }, Duration: 188.98995198s, End: Instant { tv_sec: 2335925, tv_nsec: 789573598 }
+File: /image_copy_491.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: : 19083525 }779684789, Duration: 186.770822298s, End: Instant { tv_sec: 2335925, tv_nsec: 789905887 } }
+
+File: /image_copy_126.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 807322816 }, Duration: 191.99862957s, End: Instant { tv_sec: 2335925, tv_nsec: 805952450 }File: 
+File: /image_copy_493.bmp, Start: Instant { tv_sec: /image_copy_220.bmp2335739, Start: , Instanttv_nsec { : tv_sec47437372:  }2335735, Duration: , 186tv_nsec.: 766400454329219733s }, End: , Duration: Instant190 { .tv_sec488523997: s2335925, End: , Instanttv_nsec { : tv_sec813837954:  }2335925
+, tv_nsec: 817743826 }
+File: /image_copy_350.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 877364694 }, Duration: 188.944900719s, End: Instant { tv_sec: 2335925, tv_nsec: 822265477 }
+File: s/image_copy_250.bmp, Start: Instant, End:  { tv_secInstant:  { 2335735, tv_sectv_nsec: : 585262178 }2335924, Duration: , 190tv_nsec.: 242086456970495370s }, End: 
+Instant { tv_sec: 2335925, tv_nsec: 827348762 }
+File: /image_copy_316.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 256093812 }, Duration: 197.761022853s, End: Instant { tv_sec: 2335934, tv_nsec: 17116761 }
+File: /image_copy_503.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 194297665 }, Duration: 194.826931753s, End: Instant { tv_sec: 2335934, tv_nsec: 21229578 }
+File: /image_copy_127.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 817347690 }, Duration: 200.206944237s, End: Instant { tv_sec: 2335934, tv_nsec: 24292055 }
+File: /image_copy_334.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 495953469 }, Duration: 197.549685842s, End: Instant { tv_sec: 2335934, tv_nsec: 45639407 }
+File: /image_copy_347.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 818592385 }, Duration: 197.281630063s, End: Instant { tv_sec: 2335934, tv_nsec: 100222544 }
+File: /image_copy_499.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 112423755 }, Duration: 195.055816798s, End: Instant { tv_sec: 2335934, tv_nsec: 168240713 }
+File: /image_copy_324.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 355792436 }, Duration: 197.813152664s, End: Instant { tv_sec: 2335934, tv_nsec: 168945228 }
+File: /image_copy_202.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 124099996 }, Duration: 203.084401606s, End: Instant { tv_sec: 2335938, tv_nsec: 208501730 }
+File: /image_copy_373.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 170306013 }, Duration: 201.044589535s, End: Instant { tv_sec: 2335938, tv_nsec: 214895644 }
+File: /image_copy_22.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 406125782 }, Duration: 202.813142232s, End: Instant { tv_sec: 2335938, tv_nsec: 219268110 }
+File: /image_copy_208.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 188854571 }, Duration: 203.04277167s, End: Instant { tv_sec: 2335938, tv_nsec: 231626369 }
+File: /image_copy_252.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 595897839 }, Duration: 202.637579258s, End: Instant { tv_sec: 2335938, tv_nsec: 233477193 }
+File: /image_copy_376.bmp, Start: Instant { tv_sec: 2335737, tv_nsec: 205485680 }, Duration: 201.028511707s, End: Instant { tv_sec: 2335938, tv_nsec: 233997483 }
+File: /image_copy_526.bmp, Start: Instant { tv_sec: 2335739, tv_nsec: 492174396 }, Duration: 199.313486533s, End: Instant { tv_sec: 2335938, tv_nsec: 805661057 }
+File: /image_copy_191.bmp, Start: Instant { tv_sec: 2335734, tv_nsec: 936392236 }, Duration: 223.502258647s, End: Instant { tv_sec: 2335958, tv_nsec: 438650979 }
+File: /image_copy_132.bmp, Start: Instant { tv_sec: 2335733, tv_nsec: 860421278 }, Duration: 224.587659244s, End: Instant { tv_sec: 2335958, tv_nsec: 448080618 }
+File: /image_copy_270.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 761167457 }, Duration: 222.719730768s, End: Instant { tv_sec: 2335958, tv_nsec: 480898353 }
+File: /image_copy_305.bmp, Start: Instant { tv_sec: 2335736, tv_nsec: 119031831 }, Duration: 222.362433148s, End: Instant { tv_sec: 2335958, tv_nsec: 481465107 }
+File: /image_copy_441.bmp, Start: Instant { tv_sec: 2335738, tv_nsec: 11509238 }, Duration: 239.742270917s, End: Instant { tv_sec: 2335977, tv_nsec: 753780283 }
+File: File: /image_copy_550.bmp/image_copy_142.bmp, Start: , Start: InstantInstant {  { tv_sectv_sec: : 23357392335733, , tv_nsectv_nsec: : 839140837957166994 } }, Duration: , Duration: 243237..821201039939198683ss, End: , End: InstantInstant {  { tv_sectv_sec: : 23359772335977, , tv_nsectv_nsec: : 778368161778339584 } }
+
+File: /image_copy_256.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 627524179 }, Duration: 299.433992112s, End: Instant { tv_sec: 2336035, tv_nsec: 61516419 }
+File: /image_copy_28.bmp, Start: Instant { tv_sec: 2335735, tv_nsec: 943130969 }, Duration: 337.204665384s, End: Instant { tv_sec: 2336073, tv_nsec: 147796449 }

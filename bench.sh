@@ -1,7 +1,7 @@
 #!/bin/bash
 # Define source and destination directories
-SRC="/path/to/source/images"
-DST="/path/to/mounted/fuse/fs"
+SRC="/home/aaa040/SecureFUSEStream/images/"
+DST="/home/aaa040/SecureFUSEStream/fuse/mountpoint/"
 
 # Get a list of images
 IMAGES=$(ls $SRC)

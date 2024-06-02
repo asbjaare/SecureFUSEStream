@@ -24,7 +24,7 @@ fi
 
 # Loop to create copies
 for i in $(seq 1 1000); do
-	cp "$source_image" "${destination_dir}/image_copy_$i"
+	cp "$source_image" "${destination_dir}/image_copy_$i.bmp"
 done
 
 echo "1000 copies of '$source_image' have been created in '$destination_dir'."

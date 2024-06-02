@@ -281,7 +281,7 @@ impl FilesystemMT for PassthroughFS {
             add_processed_file(path_str.clone());
 
             // Define the binary name
-            let binary_name = "video_tee".to_string();
+            let binary_name = "imgConv".to_string();
 
             // Define the argument for the binary
             let arg = format!("./mountpoint/{}", path_str);
@@ -290,8 +290,8 @@ impl FilesystemMT for PassthroughFS {
             thread::spawn(move || {
                 let start = Instant::now();
 
-                let output: Output = Command::new("sudo")
-                    .arg(&binary_name)
+                let output: Output = Command::new(&binary_name)
+                    .arg(&arg)
                     .arg(&arg)
                     .output()
                     .expect("Failed to execute process");
