@@ -10,3 +10,4 @@
 videoTEE/host/video_tee
 videoTEE/ta/dyn_list
 *.bmp
+target/*
