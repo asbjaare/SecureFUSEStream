@@ -4,6 +4,7 @@
 **/
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string>
 #include <math.h>
 #include <iostream>
@@ -13,21 +14,6 @@
 
 //number of channels i.e. R G B
 #define CHANNELS 3
-
-/* Timer helper courtesy of Morten Grønnesby */
-unsigned long long gettime()
-{
-    struct timeval tv;
-    if (gettimeofday(&tv, NULL) == -1)
-    {
-        fprintf(stderr, "Could not get time\n");
-        return -1;
-    }
-
-    unsigned long long micros = 1000000 * tv.tv_sec + tv.tv_usec;
-
-    return micros;
-}
 
 //Cuda kernel for converting RGB image into a GreyScale image
 __global__
@@ -77,8 +63,16 @@ int main(int argc, char **argv)
 	unsigned char *h_grey_image, *d_grey_image; //host and device's grey data array pointers
 	int rows; //number of rows of pixels
 	int cols; //number of columns of pixels
+  
+  FILE *f = fopen("cuda_timings.data", "a+");
 	
-  unsigned long long start_t = gettime();
+  /* timings */
+  cudaEvent_t start, stop;
+  cudaEventCreate(&start);
+  cudaEventCreate(&stop);
+
+  cudaEventRecord(start);
+
 	//load image into an array and retrieve number of pixels
 	const size_t total_pixels = loadImageFile(h_grey_image, input_file, &rows, &cols);
 
@@ -103,8 +97,13 @@ int main(int argc, char **argv)
 	//copy computed gray data array from device to host
 	cudaMemcpy(h_grey_image, d_grey_image, sizeof(unsigned char) * total_pixels, cudaMemcpyDeviceToHost);
 
-  unsigned long long finish_t = gettime();
-  std::cout << "Took: %lld", (finish_t - start_t) << std::endl;
+  cudaEventRecord(stop);
+  cudaEventSynchronize(stop);
+  float millis = 0;
+  cudaEventElapsedTime(&millis, start, stop);
+  fprintf(f, "Took: %f\n", millis);
+  fclose(f);
+
 	//output the grayscale image
 	outputImage(output_file, h_grey_image, rows, cols);
 	cudaFree(d_rgb_image);
