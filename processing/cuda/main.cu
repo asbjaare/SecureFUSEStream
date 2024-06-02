@@ -14,6 +14,21 @@
 //number of channels i.e. R G B
 #define CHANNELS 3
 
+/* Timer helper courtesy of Morten Grønnesby */
+unsigned long long gettime()
+{
+    struct timeval tv;
+    if (gettimeofday(&tv, NULL) == -1)
+    {
+        fprintf(stderr, "Could not get time\n");
+        return -1;
+    }
+
+    unsigned long long micros = 1000000 * tv.tv_sec + tv.tv_usec;
+
+    return micros;
+}
+
 //Cuda kernel for converting RGB image into a GreyScale image
 __global__
 void colorConvertToGrey(unsigned char *rgb, unsigned char *grey, int rows, int cols)
@@ -63,6 +78,7 @@ int main(int argc, char **argv)
 	int rows; //number of rows of pixels
 	int cols; //number of columns of pixels
 	
+  unsigned long long start_t = gettime();
 	//load image into an array and retrieve number of pixels
 	const size_t total_pixels = loadImageFile(h_grey_image, input_file, &rows, &cols);
 
@@ -87,6 +103,8 @@ int main(int argc, char **argv)
 	//copy computed gray data array from device to host
 	cudaMemcpy(h_grey_image, d_grey_image, sizeof(unsigned char) * total_pixels, cudaMemcpyDeviceToHost);
 
+  unsigned long long finish_t = gettime();
+  std::cout << "Took: %lld", (finish_t - start_t) << std::endl;
 	//output the grayscale image
 	outputImage(output_file, h_grey_image, rows, cols);
 	cudaFree(d_rgb_image);
