@@ -5,18 +5,17 @@
 // Copyright (c) 2016-2022 by William R. Fraser
 //
 
+use lazy_static::lazy_static;
 use std::ffi::{CStr, CString, OsStr, OsString};
 use std::fs::{self, File};
 use std::io::{self, Read, Seek, SeekFrom, Write};
-use std::{mem, thread};
 use std::os::unix::ffi::{OsStrExt, OsStringExt};
 use std::os::unix::io::{FromRawFd, IntoRawFd};
 use std::path::{Path, PathBuf};
 use std::process::{Command, Output};
-use std::time::{Duration, SystemTime, Instant};
 use std::sync::Mutex;
-use lazy_static::lazy_static;
-
+use std::time::{Duration, Instant, SystemTime};
+use std::{mem, thread};
 
 use crate::libc_extras::libc;
 use crate::libc_wrappers;
@@ -41,7 +40,6 @@ fn check_is_processed(s: &str) -> bool {
     let list = STRING_LIST.lock().unwrap();
     list.contains(&s.to_string())
 }
-
 
 fn mode_to_filetype(mode: libc::mode_t) -> FileType {
     match mode & libc::S_IFMT {
@@ -257,9 +255,6 @@ impl FilesystemMT for PassthroughFS {
         }
     }
 
-
-
-
     fn release(
         &self,
         _req: RequestInfo,
@@ -281,7 +276,7 @@ impl FilesystemMT for PassthroughFS {
         // Check if file has been processed
         if check_is_processed(&path_str) {
             info!("File was already processed: {:?}", path);
-        } else {
+        } else if path_str.ends_with(".bmp") {
             // Add file to processed list
             add_processed_file(path_str.clone());
 
@@ -302,7 +297,20 @@ impl FilesystemMT for PassthroughFS {
                     .expect("Failed to execute process");
 
                 let duration = start.elapsed();
-                println!("Time elapsed in running the command: {:?} for file {:?}", duration, path_str);
+                let end = Instant::now();
+                // Write timing information to a file
+                let mut file = std::fs::OpenOptions::new()
+                    .append(true)
+                    .create(true)
+                    .open("timing_log.txt")
+                    .expect("Failed to open timing file");
+
+                writeln!(
+                    file,
+                    "File: {}, Start: {:?}, Duration: {:?}, End: {:?}",
+                    path_str, start, duration, end
+                )
+                .expect("Failed to write to timing file");
 
                 if output.status.success() {
                     println!("stdout: {}", String::from_utf8_lossy(&output.stdout));
@@ -310,13 +318,12 @@ impl FilesystemMT for PassthroughFS {
                     eprintln!("stderr: {}", String::from_utf8_lossy(&output.stderr));
                 }
             });
+        } else {
+            info!("File is not a BMP file: {:?}", path);
         }
 
         libc_wrappers::close(fh)
     }
-
-
-
 
     fn read(
         &self,
