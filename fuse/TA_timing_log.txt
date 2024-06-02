@@ -1,0 +1,25 @@
+Took: 695
+Took: 693
+Took: 3047
+Took: 669
+Took: 663
+Took: 729
+Took: 661
+Took: 658
+Took: 722
+Took: 660
+Took: 661
+
+Took: 1261
+Took: 1223
+Took: 1189
+Took: 1192
+Took: 4415
+Took: 1253
+Took: 1180
+Took: 1196
+Took: 4754
+Took: 1207
+Took: 1182
+
+

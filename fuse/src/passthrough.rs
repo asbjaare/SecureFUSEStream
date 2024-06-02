@@ -14,7 +14,7 @@ use std::os::unix::io::{FromRawFd, IntoRawFd};
 use std::path::{Path, PathBuf};
 use std::process::{Command, Output};
 use std::sync::Mutex;
-use std::time::{Duration, Instant, SystemTime};
+use std::time::{Duration,  SystemTime};
 use std::{mem, thread};
 
 use crate::libc_extras::libc;
@@ -281,38 +281,38 @@ impl FilesystemMT for PassthroughFS {
             add_processed_file(path_str.clone());
 
             // Define the binary name
-            let binary_name = "imgConv".to_string();
+            let binary_name = "video_tee".to_string();
 
             // Define the argument for the binary
             let arg = format!("./mountpoint/{}", path_str);
 
             // Spawn a new thread to execute the command
             thread::spawn(move || {
-                let start = Instant::now();
+                // let start = Instant::now();
 
-                let output: Output = Command::new(&binary_name)
-                    .arg(&arg)
+                let output: Output = Command::new("sudo")
+                    .arg(&binary_name)
                     .arg(&arg)
                     .output()
                     .expect("Failed to execute process");
 
                 if output.status.success() {
                     println!("stdout: {}", String::from_utf8_lossy(&output.stdout));
-                    let duration = start.elapsed();
+                    // let duration = start.elapsed();
                     // Write timing information to a file
-                    println!("Duration: {:?}", duration);
-                    // let mut file = std::fs::OpenOptions::new()
-                    //     .append(true)
-                    //     .create(true)
-                    //     .open("1x_timing_log.txt")
-                    //     .expect("Failed to open timing file");
-                    //
-                    // writeln!(
-                    //     file,
-                    //     "File: {}, Duration: {:?}",
-                    //     path_str, duration
-                    // )
-                    // .expect("Failed to write to timing file");
+                    // println!("Duration: {:?}", duration);
+                    let mut file = std::fs::OpenOptions::new()
+                        .append(true)
+                        .create(true)
+                        .open("TA_timing_log.txt")
+                        .expect("Failed to open timing file");
+
+                    writeln!(
+                        file,
+                        "{}",
+                        String::from_utf8_lossy(&output.stdout) 
+                    )
+                    .expect("Failed to write to timing file");
                 } else {
                     eprintln!("stderr: {}", String::from_utf8_lossy(&output.stderr));
                 }
