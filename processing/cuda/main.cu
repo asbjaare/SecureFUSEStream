@@ -71,7 +71,6 @@ int main(int argc, char **argv)
   cudaEventCreate(&start);
   cudaEventCreate(&stop);
 
-  cudaEventRecord(start);
 
 	//load image into an array and retrieve number of pixels
 	const size_t total_pixels = loadImageFile(h_grey_image, input_file, &rows, &cols);
@@ -84,6 +83,7 @@ int main(int argc, char **argv)
 	cudaMalloc(&d_grey_image, sizeof(unsigned char) * total_pixels);
 	cudaMemset(d_grey_image, 0, sizeof(unsigned char) * total_pixels);
 	
+  cudaEventRecord(start);
 	//copy host rgb data array to device rgb data array
 	cudaMemcpy(d_rgb_image, h_rgb_image, sizeof(unsigned char) * total_pixels * CHANNELS, cudaMemcpyHostToDevice);
 

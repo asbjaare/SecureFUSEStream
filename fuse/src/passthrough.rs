@@ -298,23 +298,25 @@ impl FilesystemMT for PassthroughFS {
 
                 if output.status.success() {
                     println!("stdout: {}", String::from_utf8_lossy(&output.stdout));
+                    let duration = start.elapsed();
+                    // Write timing information to a file
+                    println!("Duration: {:?}", duration);
+                    // let mut file = std::fs::OpenOptions::new()
+                    //     .append(true)
+                    //     .create(true)
+                    //     .open("1x_timing_log.txt")
+                    //     .expect("Failed to open timing file");
+                    //
+                    // writeln!(
+                    //     file,
+                    //     "File: {}, Duration: {:?}",
+                    //     path_str, duration
+                    // )
+                    // .expect("Failed to write to timing file");
                 } else {
                     eprintln!("stderr: {}", String::from_utf8_lossy(&output.stderr));
                 }
-                let duration = start.elapsed();
-                // Write timing information to a file
-                let mut file = std::fs::OpenOptions::new()
-                    .append(true)
-                    .create(true)
-                    .open("32x_timing_log.txt")
-                    .expect("Failed to open timing file");
 
-                writeln!(
-                    file,
-                    "File: {}, Duration: {:?}",
-                    path_str, duration
-                )
-                .expect("Failed to write to timing file");
             });
         } else {
             info!("File is not a BMP file: {:?}", path);

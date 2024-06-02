@@ -12,6 +12,8 @@ START=$(date +%s)
 # Copy images
 for img in $IMAGES; do
 	cp "${SRC}/${img}" "${DST}/"
+	echo "Sleeping for 2 sec"
+	sleep 5
 done
 
 # Benchmark end time
