@@ -96,6 +96,9 @@ int main(int argc, char *argv[]) {
   signed_res_t *res_buf;
   FILE *img_fp;
 
+  /* Get time before operation */
+  unsigned long long t_start = gettime();
+
   /* Connect to TEE */
   res = TEEC_InitializeContext(NULL, &ctx);
   if (res != TEEC_SUCCESS)
@@ -153,7 +156,9 @@ int main(int argc, char *argv[]) {
          err_origin);
 
   // Print timestamp of successful computation
-  printf("%lld\n", gettime());
+  unsigned long long t_finish = gettime();
+  printf("Finished at: %lld\n", t_finish);
+  printf("Processing took: %lld\n", t_finish - t_start);
   fclose(img_fp);
   // char new_filename[256]; // Adjust size as needed based on the maximum expected
                           // path length
