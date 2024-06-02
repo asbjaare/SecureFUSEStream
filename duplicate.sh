@@ -23,7 +23,7 @@ if [ ! -d "$destination_dir" ]; then
 fi
 
 # Loop to create copies
-for i in $(seq 1 1000); do
+for i in $(seq 1 11); do
 	cp "$source_image" "${destination_dir}/image_copy_$i.bmp"
 done
 

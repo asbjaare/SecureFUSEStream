@@ -288,7 +288,7 @@ impl FilesystemMT for PassthroughFS {
 
             // Spawn a new thread to execute the command
             thread::spawn(move || {
-                let start = Instant::now().elapsed();
+                let start = Instant::now();
 
                 let output: Output = Command::new(&binary_name)
                     .arg(&arg)
@@ -301,18 +301,18 @@ impl FilesystemMT for PassthroughFS {
                 } else {
                     eprintln!("stderr: {}", String::from_utf8_lossy(&output.stderr));
                 }
-                let end = Instant::now().elapsed();
+                let duration = start.elapsed();
                 // Write timing information to a file
                 let mut file = std::fs::OpenOptions::new()
-                    .truncate(true)
+                    .append(true)
                     .create(true)
-                    .open("timing_log.txt")
+                    .open("32x_timing_log.txt")
                     .expect("Failed to open timing file");
 
                 writeln!(
                     file,
-                    "File: {}, Start: {:?}, End: {:?}",
-                    path_str, start, end
+                    "File: {}, Duration: {:?}",
+                    path_str, duration
                 )
                 .expect("Failed to write to timing file");
             });

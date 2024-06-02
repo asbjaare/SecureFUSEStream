@@ -1,6 +1,6 @@
 #!/bin/bash
 # Define source and destination directories
-SRC="/home/aaa040/SecureFUSEStream/images/"
+SRC="/home/aaa040/SecureFUSEStream/bench/"
 DST="/home/aaa040/SecureFUSEStream/fuse/mountpoint/"
 
 # Get a list of images

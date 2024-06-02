@@ -1,0 +1,11 @@
+File: File: /image_copy_10.bmp/image_copy_11.bmp, Duration: , Duration: 961829..007694335156msms
+
+File: /image_copy_1.bmp, Duration: 828.7636ms
+File: /image_copy_2.bmp, Duration: 793.297003ms
+File: /image_copy_3.bmp, Duration: 845.914382ms
+File: /image_copy_6.bmp, Duration: 2.231526469s
+File: /image_copy_7.bmp, Duration: 2.123992849s
+File: /image_copy_4.bmp, Duration: 2.756602338s
+File: /image_copy_5.bmp, Duration: 2.734478694s
+File: /image_copy_9.bmp, Duration: 2.176652242s
+File: /image_copy_8.bmp, Duration: 2.589208671s
