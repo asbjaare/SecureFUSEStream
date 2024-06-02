@@ -96,6 +96,13 @@ int main(int argc, char *argv[]) {
   signed_res_t *res_buf;
   FILE *img_fp;
 
+
+  /* Load image into memory */
+  img_meta_t *metadata = calloc(1, sizeof(img_meta_t));
+  img_fp = load_img(argv[1], &img, metadata);
+  if (img == NULL)
+    errx(EXIT_FAILURE, "failed to load image");
+
   /* Get time before operation */
   unsigned long long t_start = gettime();
 
@@ -122,11 +129,6 @@ int main(int argc, char *argv[]) {
                        TEEC_MEMREF_TEMP_OUTPUT, TEEC_NONE);
 
   /* Load image into memref to send to TA */
-  img_meta_t *metadata = calloc(1, sizeof(img_meta_t));
-  img_fp = load_img(argv[1], &img, metadata);
-  if (img == NULL)
-    errx(EXIT_FAILURE, "failed to load image");
-
   op.params[0].tmpref.size =
       (size_t)(sizeof(RGB) * metadata->width * metadata->height);
   op.params[0].tmpref.buffer = img;
@@ -157,8 +159,8 @@ int main(int argc, char *argv[]) {
 
   // Print timestamp of successful computation
   unsigned long long t_finish = gettime();
-  printf("Finished at: %lld\n", t_finish);
-  printf("Processing took: %lld\n", t_finish - t_start);
+  // printf("Finished at: %lld\n", t_finish);
+  printf("Took: %lld\n", (t_finish - t_start) / 1000);
   fclose(img_fp);
   // char new_filename[256]; // Adjust size as needed based on the maximum expected
                           // path length
